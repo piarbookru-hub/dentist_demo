@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стоматологический кабинет ИП Иванов | Dental Office IE Ivanov</title>
+<meta name="description" content="Стоматологический кабинет ИП Иванов — лечение, протезирование, гигиена полости рта. Dental office IE Ivanov — treatment, prosthetics, oral hygiene.">
+<style>
+  :root{
+    --primary:#0e7490;
+    --primary-dark:#155e75;
+    --accent:#22d3ee;
+    --light:#f0f9ff;
+    --text:#1e293b;
+    --muted:#64748b;
+    --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',Roboto,Arial,sans-serif;color:var(--text);background:var(--white);line-height:1.6}
+  img{max-width:100%;display:block}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:100;background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,.08)}
+  .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;color:var(--primary-dark);text-decoration:none}
+  .logo svg{width:34px;height:34px}
+  nav ul{list-style:none;display:flex;gap:22px}
+  nav a{text-decoration:none;color:var(--text);font-size:.95rem;transition:color .2s}
+  nav a:hover{color:var(--primary)}
+  .lang-switch{display:flex;gap:6px}
+  .lang-switch button{border:1px solid var(--primary);background:transparent;color:var(--primary);padding:5px 12px;border-radius:20px;cursor:pointer;font-weight:600;transition:.2s}
+  .lang-switch button.active{background:var(--primary);color:var(--white)}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:var(--white);padding:70px 20px;text-align:center}
+  .hero h1{font-size:2.4rem;margin-bottom:14px}
+  .hero p{font-size:1.15rem;opacity:.92;max-width:640px;margin:0 auto 28px}
+  .btn{display:inline-block;background:var(--accent);color:var(--primary-dark);font-weight:700;padding:13px 34px;border-radius:30px;text-decoration:none;transition:.2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+
+  section{padding:60px 20px}
+  .container{max-width:1100px;margin:0 auto}
+  h2{font-size:1.9rem;text-align:center;color:var(--primary-dark);margin-bottom:36px;position:relative}
+  h2::after{content:"";display:block;width:70px;height:4px;background:var(--accent);margin:10px auto 0;border-radius:2px}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+  .card{background:var(--light);border-radius:14px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.06);transition:transform .2s}
+  .card:hover{transform:translateY(-5px)}
+  .card img{height:170px;width:100%;object-fit:cover}
+  .card-body{padding:18px 20px 22px}
+  .card h3{color:var(--primary-dark);margin-bottom:8px;font-size:1.1rem}
+  .card p{color:var(--muted);font-size:.92rem}
+
+  /* Gallery */
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .gallery img{height:200px;width:100%;object-fit:cover;border-radius:12px;transition:transform .25s}
+  .gallery img:hover{transform:scale(1.03)}
+
+  /* About / doctor */
+  .about{display:flex;gap:36px;align-items:center;flex-wrap:wrap}
+  .about img{width:280px;height:320px;object-fit:cover;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  .about-text{flex:1;min-width:260px}
+  .about-text h3{color:var(--primary-dark);font-size:1.3rem;margin-bottom:10px}
+  .about-text ul{margin:14px 0 0 20px;color:var(--muted)}
+  .about-text li{margin-bottom:6px}
+
+  /* Contacts */
+  .contacts{background:var(--light)}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;text-align:center}
+  .contact-item{background:var(--white);border-radius:14px;padding:26px 18px;box-shadow:0 3px 10px rgba(0,0,0,.05)}
+  .contact-item .icon{font-size:2rem;margin-bottom:10px}
+  .contact-item h4{color:var(--primary-dark);margin-bottom:6px}
+  .contact-item a{color:var(--primary);text-decoration:none}
+
+  footer{background:var(--primary-dark);color:rgba(255,255,255,.85);text-align:center;padding:24px 20px;font-size:.9rem}
+
+  [data-en]{display:none}
+  html.en [data-en]{display:block}
+  html.en [data-ru]{display:none}
+  html.en span[data-en],html.en a[data-en],html.en li[data-en],html.en small[data-en]{display:inline}
+  html.en h1,html.en h2,html.en h3,html.en h4,html.en p{display:block}
+
+  @media(max-width:760px){
+    nav ul{display:none}
+    .hero h1{font-size:1.7rem}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><path d="M12 2C8 2 5 5 5 9c0 5 2 11 4 11 1.5 0 1-4 3-4s1.5 4 3 4c2 0 4-6 4-11 0-4-3-7-7-7z"/></svg>
+      <span>
+        <span data-ru>ИП Иванов · Стоматология</span>
+        <span data-en>IE Ivanov · Dentistry</span>
+      </span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#services"><span data-ru>Услуги</span><span data-en>Services</span></a></li>
+        <li><a href="#gallery"><span data-ru>Клиника</span><span data-en>Clinic</span></a></li>
+        <li><a href="#doctor"><span data-ru>Врач</span><span data-en>Doctor</span></a></li>
+        <li><a href="#contacts"><span data-ru>Контакты</span><span data-en>Contacts</span></a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <button id="btn-ru" class="active" onclick="setLang('ru')">RU</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <h1>
+    <span data-ru>Здоровая улыбка начинается здесь</span>
+    <span data-en>A healthy smile starts here</span>
+  </h1>
+  <p>
+    <span data-ru>Стоматологический кабинет ИП Иванов — современное лечение, безболезненные процедуры и индивидуальный подход к каждому пациенту.</span>
+    <span data-en>Dental office of IE Ivanov — modern treatment, painless procedures and an individual approach to every patient.</span>
+  </p>
+  <a class="btn" href="tel:+79001234567">
+    <span data-ru>Записаться на приём</span>
+    <span data-en>Book an appointment</span>
+  </a>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>
+      <span data-ru>Наши услуги</span>
+      <span data-en>Our Services</span>
+    </h2>
+    <div class="services-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddcec9bf?w=600&q=80" alt="Терапия / General dentistry">
+        <div class="card-body">
+          <h3><span data-ru>Терапия</span><span data-en>General Dentistry</span></h3>
+          <p><span data-ru>Лечение кариеса, пульпита и других заболеваний зубов с использованием современных материалов.</span><span data-en>Treatment of cavities, pulpitis and other dental diseases using modern materials.</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1598256989807-feb530ff9206?w=600&q=80" alt="Протезирование / Prosthetics">
+        <div class="card-body">
+          <h3><span data-ru>Протезирование</span><span data-en>Prosthetics</span></h3>
+          <p><span data-ru>Коронки, виниры и съёмные протезы — восстановление красоты и функции вашей улыбки.</span><span data-en>Crowns, veneers and dentures — restoring the beauty and function of your smile.</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588773816449-700a2e738da4?w=600&q=80" alt="Гигиена полости рта / Oral hygiene">
+        <div class="card-body">
+          <h3><span data-ru>Гигиена полости рта</span><span data-en>Oral Hygiene</span></h3>
+          <p><span data-ru>Профессиональная чистка, отбеливание и профилактика заболеваний дёсен.</span><span data-en>Professional cleaning, whitening and prevention of gum disease.</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1629454575991-bba37aaaa3da?w=600&q=80" alt="Детская стоматология / Pediatric dentistry">
+        <div class="card-body">
+          <h3><span data-ru>Детская стоматология</span><span data-en>Pediatric Dentistry</span></h3>
+          <p><span data-ru>Бережный и безболезненный подход к самым маленьким пациентам.</span><span data-en>A gentle and painless approach to our youngest patients.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:var(--light)">
+  <div class="container">
+    <h2>
+      <span data-ru>Наша клиника</span>
+      <span data-en>Our Clinic</span>
+    </h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1629909613654-2175ea5c4797?w=600&q=80" alt="Кабинет / Treatment room">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf4726fe4?w=600&q=80" alt="Оборудование / Equipment">
+      <img src="https://images.unsplash.com/photo-1609840720814-d04bbb8af86c?w=600&q=80" alt="Рентген / X-ray">
+      <img src="https://images.unsplash.com/photo-1519824145371-316640b49458?w=600&q=80" alt="Приёмная / Reception">
+    </div>
+  </div>
+</section>
+
+<section id="doctor">
+  <div class="container about">
+    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&q=80" alt="Иванов И.И., врач-стоматолог / Dr. Ivanov I.I., dentist">
+    <div class="about-text">
+      <h2 style="text-align:left">
+        <span data-ru>Врач</span>
+        <span data-en>Doctor</span>
+      </h2>
+      <h3><span data-ru>Иванов Иван Иванович</span><span data-en>Ivan Ivanovich Ivanov</span></h3>
+      <p>
+        <span data-ru>Врач-стоматолог общей практики, основатель кабинета. Опыт работы — более 15 лет. Регулярно проходит повышение квалификации в России и за рубежом.</span>
+        <span data-en>General practice dentist and founder of the office. Over 15 years of experience. Regularly advances his qualifications in Russia and abroad.</span>
+      </p>
+      <ul>
+        <li><span data-ru>Диплом о высшем медицинском образовании (2008)</span><span data-en>Degree in Medicine (2008)</span></li>
+        <li><span data-ru>Сертификат «Стоматология общая»</span><span data-en>Certificate "General Dentistry"</span></li>
+        <li><span data-ru>Член Ассоциации стоматологов</span><span data-en>Member of the Dental Association</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="container">
+    <h2>
+      <span data-ru>Контакты</span>
+      <span data-en>Contacts</span>
+    </h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="icon">📍</div>
+        <h4><span data-ru>Адрес</span><span data-en>Address</span></h4>
+        <p><span data-ru>г. Москва, ул. Примерная, д. 1</span><span data-en>1 Example St., Moscow</span></p>
+      </div>
+      <div class="contact-item">
+        <div class="icon">📞</div>
+        <h4><span data-ru>Телефон</span><span data-en>Phone</span></h4>
+        <p><a href="tel:+79001234567">+7 (900) 123-45-67</a></p>
+      </div>
+      <div class="contact-item">
+        <div class="icon">🕒</div>
+        <h4><span data-ru>Часы работы</span><span data-en>Working Hours</span></h4>
+        <p><span data-ru>Пн–Пт: 9:00–19:00<br>Сб: 10:00–16:00</span><span data-en>Mon–Fri: 9:00–19:00<br>Sat: 10:00–16:00</span></p>
+      </div>
+      <div class="contact-item">
+        <div class="icon">✉️</div>
+        <h4><span data-ru>E-mail</span><span data-en>E-mail</span></h4>
+        <p><a href="mailto:info@ivanov-dental.ru">info@ivanov-dental.ru</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><span data-ru>© 2026 Стоматологический кабинет ИП Иванов. Все права защищены.</span><span data-en>© 2026 Dental Office of IE Ivanov. All rights reserved.</span></p>
+</footer>
+
+<script>
+  function setLang(lang){
+    const html = document.documentElement;
+    if(lang === 'en'){ html.classList.add('en'); html.lang = 'en'; }
+    else { html.classList.remove('en'); html.lang = 'ru'; }
+    document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    localStorage.setItem('lang', lang);
+  }
+  // Restore saved language
+  const saved = localStorage.getItem('lang');
+  if(saved === 'en') setLang('en');
+</script>
+
+</body>
+</html>
