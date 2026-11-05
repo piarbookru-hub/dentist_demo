@@ -3,579 +3,659 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ДЕНТИКА — Частная стоматологическая клиника в Москве</title>
+    <title>ИП Петров А.В. — Юридические услуги в Москве</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/cyrillic-400-normal.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/cyrillic-600-normal.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/cyrillic-700-normal.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/manrope@latest/cyrillic-700-normal.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/manrope@latest/cyrillic-800-normal.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
-        body { font-family: 'Inter', sans-serif; background: #f4fafc; color: #1e3a44; line-height: 1.55; overflow-x: hidden; }
-        h1, h2, h3, .logo { font-family: 'Manrope', sans-serif; }
-        p, span, a, div, li { overflow-wrap: break-word; }
-        section { scroll-margin-top: 64px; }
+        body { font-family: 'Inter', sans-serif; background: #f5f7fa; color: #2a3847; line-height: 1.7; overflow-x: hidden; }
+        h1, h2, h3, .logo { font-family: 'Merriweather', serif; color: #1e3a5f; }
         img { max-width: 100%; display: block; }
-        /* Убираем подписи-заглушки «фото клиники» и т.п. */
-        .photo-fallback span { display: none; }
-
-        /* ===== NAV ===== */
-        nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); z-index: 1000; padding: 10px 0; box-shadow: 0 2px 16px rgba(14,116,144,0.08); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; position: relative; gap: 16px; }
-        .logo { font-size: 22px; font-weight: 800; color: #0e7490; letter-spacing: 2px; line-height: 1.1; }
-        .logo small { display: block; font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 600; color: #64748b; letter-spacing: 2.5px; text-transform: uppercase; }
-        .nav-links { display: flex; gap: 22px; list-style: none; }
-        .nav-links a { color: #334155; text-decoration: none; font-weight: 600; font-size: 13px; transition: color 0.25s; }
-        .nav-links a:hover { color: #0e7490; }
-        .nav-phone { color: #0e7490; font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; }
-        .nav-phone i { margin-right: 5px; }
-        .burger { display: none; background: none; border: none; color: #0e7490; font-size: 22px; cursor: pointer; padding: 4px 8px; }
-
-        /* ===== HERO ===== */
-        .hero { padding: 84px 20px 30px; background: linear-gradient(135deg, #ecfeff 0%, #f0f9ff 55%, #e0f2fe 100%); position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: -120px; right: -120px; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(6,182,212,0.14), transparent 70%); }
-        .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr 1fr; gap: 30px; align-items: center; position: relative; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: #fff; border: 1px solid #a5f3fc; color: #0e7490; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; padding: 5px 13px; border-radius: 40px; margin-bottom: 12px; box-shadow: 0 3px 10px rgba(14,116,144,0.07); }
-        .hero-badge i { font-size: 10px; }
-        .hero h1 { font-size: clamp(1.7rem, 4.2vw, 2.7rem); font-weight: 800; line-height: 1.14; color: #0c4a6e; margin-bottom: 12px; }
-        .hero h1 span { color: #0891b2; }
-        .hero-sub { font-size: 15px; color: #475569; margin-bottom: 18px; max-width: 480px; }
-        .hero-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 26px; border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; text-decoration: none; border: 2px solid transparent; cursor: pointer; transition: all 0.25s; letter-spacing: 0.3px; }
-        .btn-primary { background: linear-gradient(135deg, #0891b2, #0e7490); color: #fff; box-shadow: 0 8px 20px rgba(8,145,178,0.3); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(8,145,178,0.42); }
-        .btn-outline { background: #fff; color: #0e7490; border-color: #67e8f9; }
-        .btn-outline:hover { border-color: #0891b2; background: #ecfeff; }
-        .hero-stats { display: flex; gap: 26px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid #bae6fd; }
-        .hero-stat b { display: block; font-family: 'Manrope', sans-serif; font-size: 24px; font-weight: 800; color: #0891b2; line-height: 1.1; }
-        .hero-stat span { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
-        .hero-photo { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 45px rgba(12,74,110,0.18); border: 5px solid #fff; background: linear-gradient(135deg, #0891b2, #0e7490 55%, #155e75); min-height: 300px; display: flex; align-items: center; justify-content: center; }
-        .hero-photo img { width: 100%; height: 340px; object-fit: cover; position: absolute; inset: 0; }
-        .photo-fallback { color: rgba(255,255,255,0.9); text-align: center; padding: 20px; }
-        .photo-fallback i { font-size: 52px; margin-bottom: 10px; display: block; }
-        .photo-fallback span { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; opacity: 0.85; }
-        .hero-float { position: absolute; bottom: 14px; left: 14px; background: #fff; border-radius: 12px; padding: 10px 14px; box-shadow: 0 10px 24px rgba(12,74,110,0.2); display: flex; align-items: center; gap: 10px; z-index: 2; }
-        .hero-float i { width: 34px; height: 34px; background: #ecfeff; color: #0891b2; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
-        .hero-float b { display: block; font-size: 13px; color: #0c4a6e; }
-        .hero-float span { font-size: 11px; color: #64748b; }
-
-        /* ===== ОБЩИЕ СЕКЦИИ ===== */
-        .sec { padding: 36px 20px; }
-        .sec-inner { max-width: 1200px; margin: 0 auto; }
-        .sec-head { text-align: center; margin-bottom: 20px; }
-        .sec-head .kicker { display: inline-block; color: #0891b2; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.2px; margin-bottom: 5px; }
-        .sec-head h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; color: #0c4a6e; position: relative; display: inline-block; }
-        .sec-head h2::after { content: ''; position: absolute; bottom: -7px; left: 50%; transform: translateX(-50%); width: 44px; height: 3px; border-radius: 3px; background: linear-gradient(90deg, #06b6d4, #0e7490); }
-        .sec-head p { color: #64748b; font-size: 14px; margin-top: 16px; max-width: 560px; margin-left: auto; margin-right: auto; }
-
-        /* ===== ПРЕИМУЩЕСТВА (полоса) ===== */
-        .adv { background: #0e7490; padding: 0; }
-        .adv-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
-        .adv-item { display: flex; align-items: center; gap: 10px; padding: 14px 18px; color: #fff; border-right: 1px solid rgba(255,255,255,0.12); }
-        .adv-item:last-child { border-right: none; }
-        .adv-item i { font-size: 18px; color: #67e8f9; flex-shrink: 0; width: 24px; text-align: center; }
-        .adv-item b { display: block; font-size: 13px; line-height: 1.25; }
-        .adv-item span { font-size: 11px; color: #a5f3fc; }
-
-        /* ===== УСЛУГИ ===== */
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-        .srv-card { background: #fff; border: 1px solid #e0f2fe; border-radius: 14px; padding: 18px 16px; transition: all 0.28s; position: relative; overflow: hidden; min-width: 0; }
-        .srv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #06b6d4, #0e7490); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-        .srv-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(14,116,144,0.13); border-color: #a5f3fc; }
-        .srv-card:hover::before { transform: scaleX(1); }
-        .srv-icon { width: 46px; height: 46px; border-radius: 12px; background: linear-gradient(135deg, #ecfeff, #cffafe); color: #0891b2; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 11px; transition: all 0.28s; }
-        .srv-card:hover .srv-icon { background: linear-gradient(135deg, #0891b2, #0e7490); color: #fff; }
-        .srv-card h3 { font-size: 15.5px; font-weight: 700; color: #0c4a6e; margin-bottom: 5px; }
-        .srv-card p { font-size: 12.5px; color: #64748b; margin-bottom: 9px; }
-        .srv-price { display: inline-block; font-size: 13px; font-weight: 700; color: #0e7490; background: #ecfeff; padding: 3px 11px; border-radius: 20px; }
-
-        /* ===== ЦЕНЫ ===== */
-        .prices { background: #fff; }
-        .price-table { max-width: 860px; margin: 0 auto; background: #f4fafc; border: 1px solid #e0f2fe; border-radius: 14px; padding: 10px 22px; }
-        .price-row { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; padding: 10px 0; border-bottom: 1px dashed #bae6fd; font-size: 14px; }
-        .price-row:last-child { border-bottom: none; }
-        .price-row .name { color: #334155; font-weight: 500; }
-        .price-row .name i { color: #06b6d4; margin-right: 8px; font-size: 12px; width: 16px; text-align: center; }
-        .price-row .cost { font-family: 'Manrope', sans-serif; font-weight: 800; color: #0e7490; white-space: nowrap; font-size: 14px; }
-        .price-note { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 12px; }
-
-        /* ===== О КЛИНИКЕ ===== */
-        .about-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 26px; align-items: center; }
-        .about-photo { border-radius: 16px; overflow: hidden; position: relative; border: 5px solid #fff; box-shadow: 0 16px 36px rgba(12,74,110,0.14); background: linear-gradient(135deg, #155e75, #0e7490 60%, #0891b2); min-height: 240px; display: flex; align-items: center; justify-content: center; }
-        .about-photo img { width: 100%; height: 300px; object-fit: cover; position: absolute; inset: 0; }
-        .about-text h2 { font-size: clamp(1.3rem, 2.8vw, 1.7rem); font-weight: 800; color: #0c4a6e; margin-bottom: 4px; }
-        .about-text .kicker { display: block; color: #0891b2; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.2px; margin-bottom: 6px; }
-        .about-text p { font-size: 14px; color: #475569; margin-bottom: 10px; }
-        .about-feats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
-        .about-feat { display: flex; align-items: center; gap: 9px; background: #fff; border: 1px solid #e0f2fe; border-radius: 10px; padding: 9px 12px; font-size: 12.5px; font-weight: 600; color: #334155; }
-        .about-feat i { color: #10b981; font-size: 13px; flex-shrink: 0; }
-
-        /* ===== ВРАЧИ ===== */
-        .doctors { background: #fff; }
-        .doc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-        .doc-card { background: #f4fafc; border: 1px solid #e0f2fe; border-radius: 14px; overflow: hidden; text-align: center; transition: all 0.28s; min-width: 0; }
-        .doc-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(14,116,144,0.13); }
-        .doc-photo { height: 220px; background: linear-gradient(160deg, #0891b2, #0e7490 55%, #155e75); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        .doc-photo img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-        .doc-info { padding: 14px 14px 16px; }
-        .doc-info h3 { font-size: 16px; font-weight: 700; color: #0c4a6e; margin-bottom: 3px; }
-        .doc-role { font-size: 11.5px; color: #0891b2; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 5px; }
-        .doc-info p { font-size: 12.5px; color: #64748b; }
-
-        /* ===== ГАЛЕРЕЯ ===== */
-        .gal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-        .gal-item { border-radius: 12px; overflow: hidden; position: relative; border: 3px solid #fff; box-shadow: 0 6px 18px rgba(12,74,110,0.1); background: linear-gradient(135deg, #0e7490, #0891b2); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
-        .gal-item img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; transition: transform 0.4s; }
-        .gal-item:hover img { transform: scale(1.05); }
-
-        /* ===== ОТЗЫВЫ ===== */
-        .reviews { background: #fff; }
-        .rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-        .rev-card { background: #f4fafc; border: 1px solid #e0f2fe; border-radius: 14px; padding: 16px; min-width: 0; }
-        .rev-stars { color: #f59e0b; font-size: 12px; margin-bottom: 8px; letter-spacing: 2px; }
-        .rev-card p { font-size: 13px; color: #475569; margin-bottom: 10px; font-style: italic; }
-        .rev-author { display: flex; align-items: center; gap: 9px; }
-        .rev-ava { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #06b6d4, #0e7490); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; }
-        .rev-author b { display: block; font-size: 13px; color: #0c4a6e; }
-        .rev-author span { font-size: 11px; color: #94a3b8; }
-
-        /* ===== КОНТАКТЫ + ФОРМА ===== */
-        .contact { background: linear-gradient(135deg, #0c4a6e, #0e7490 70%, #155e75); color: #fff; }
-        .contact .sec-head h2 { color: #fff; }
-        .contact .sec-head p { color: #a5f3fc; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 26px; align-items: start; }
-        .c-item { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 14px; }
-        .c-item i { width: 38px; height: 38px; background: rgba(103,232,249,0.15); color: #67e8f9; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
-        .c-item b { display: block; font-size: 10.5px; text-transform: uppercase; letter-spacing: 1.2px; color: #67e8f9; margin-bottom: 2px; }
-        .c-item span, .c-item a { color: #f0f9ff; font-size: 14px; text-decoration: none; font-weight: 500; }
-        .c-item a:hover { color: #67e8f9; }
-        .c-socials { display: flex; gap: 9px; margin-top: 14px; }
-        .c-socials a { width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,0.1); color: #67e8f9; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 15px; transition: all 0.25s; }
-        .c-socials a:hover { background: #06b6d4; color: #fff; transform: translateY(-2px); }
-        .form-card { background: #fff; border-radius: 16px; padding: 22px; box-shadow: 0 20px 45px rgba(0,0,0,0.25); }
-        .form-card h3 { font-size: 19px; font-weight: 800; color: #0c4a6e; margin-bottom: 3px; }
-        .form-card > p { font-size: 12.5px; color: #64748b; margin-bottom: 14px; }
-        .f-group { margin-bottom: 11px; }
-        .f-group label { display: block; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #475569; margin-bottom: 4px; }
-        .f-group input, .f-group select, .f-group textarea { width: 100%; padding: 11px 13px; background: #f4fafc; border: 2px solid #e0f2fe; border-radius: 9px; color: #1e3a44; font-family: inherit; font-size: 16px; transition: border-color 0.25s; }
-        .f-group input:focus, .f-group select:focus, .f-group textarea:focus { outline: none; border-color: #06b6d4; background: #fff; }
-        .f-group textarea { resize: vertical; min-height: 64px; }
-        .f-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
-        .privacy { font-size: 10.5px; color: #94a3b8; text-align: center; margin-top: 9px; }
-
-        /* ===== FOOTER ===== */
-        footer { background: #082f49; color: #7dd3fc; padding: 20px; text-align: center; font-size: 12.5px; }
-        footer .logo { color: #67e8f9; font-size: 17px; margin-bottom: 4px; display: inline-block; }
-        footer .logo small { color: #475569; }
-
-        /* ===== ПЛАНШЕТ ===== */
-        @media (max-width: 980px) {
-            .hero-inner { grid-template-columns: 1fr; gap: 20px; }
-            .hero-photo img { height: 280px; }
-            .adv-inner { grid-template-columns: 1fr 1fr; }
-            .adv-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-            .services-grid { grid-template-columns: 1fr 1fr; }
-            .about-grid { grid-template-columns: 1fr; gap: 18px; }
-            .doc-grid { grid-template-columns: 1fr 1fr; }
-            .gal-grid { grid-template-columns: 1fr 1fr; }
-            .rev-grid { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; gap: 18px; }
-        }
-
-        /* ===== СМАРТФОН ===== */
-        @media (max-width: 768px) {
-            nav { padding: 8px 0; }
-            .logo { font-size: 18px; }
-            .nav-phone { display: none; }
-            .burger { display: block; }
-            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; gap: 0; padding: 6px 0 10px; box-shadow: 0 14px 30px rgba(12,74,110,0.15); border-top: 1px solid #e0f2fe; }
+        p, span, a, div { overflow-wrap: break-word; }
+        section { scroll-margin-top: 76px; }
+        a, button, .faq-question { -webkit-tap-highlight-color: transparent; }
+        
+        nav { position: fixed; top: 0; width: 100%; background: #1e3a5f; z-index: 1000; padding: 18px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 30px; position: relative; }
+        .logo { font-size: 22px; font-weight: 700; color: #c9a961; letter-spacing: 1px; line-height: 1.2; }
+        .logo span { color: #fff; font-weight: 400; font-size: 14px; display: block; letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 14px; transition: color 0.3s; }
+        .nav-links a:hover { color: #c9a961; }
+        .nav-phone { color: #c9a961; font-weight: 700; font-size: 15px; text-decoration: none; white-space: nowrap; }
+        .nav-phone i { margin-right: 6px; }
+        .menu-toggle { display: none; background: none; border: none; color: #c9a961; font-size: 24px; cursor: pointer; padding: 6px 10px; line-height: 1; }
+        
+        .hero { min-height: 100vh; background: linear-gradient(135deg, rgba(30,58,95,0.92), rgba(20,40,70,0.95)), url('images/hero.jpg') center/cover; display: flex; align-items: center; padding: 140px 30px 80px; color: #fff; }
+        .hero-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+        .hero-badge { display: inline-block; padding: 8px 18px; background: rgba(201,169,97,0.2); border: 1px solid #c9a961; color: #c9a961; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; border-radius: 4px; }
+        .hero h1 { font-size: 56px; color: #fff; margin-bottom: 25px; line-height: 1.15; font-weight: 900; }
+        .hero h1 span { color: #c9a961; display: block; font-size: 28px; font-weight: 400; font-style: italic; margin-top: 10px; }
+        .hero p { font-size: 18px; margin-bottom: 35px; color: #d0d8e0; line-height: 1.7; }
+        .hero-btns { display: flex; flex-wrap: wrap; gap: 15px; }
+        .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(201,169,97,0.3); }
+        .hero-stat .number { font-family: 'Merriweather', serif; font-size: 42px; color: #c9a961; font-weight: 900; line-height: 1; }
+        .hero-stat .label { color: #a0aab5; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px; }
+        .hero-photo { position: relative; }
+        .hero-photo img { width: 100%; height: 550px; object-fit: cover; border-radius: 4px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); border: 4px solid rgba(201,169,97,0.3); }
+        .hero-photo-badge { position: absolute; bottom: -30px; left: 30px; background: #c9a961; color: #1e3a5f; padding: 20px 30px; border-radius: 4px; font-weight: 700; }
+        .hero-photo-badge strong { display: block; font-family: 'Merriweather', serif; font-size: 28px; line-height: 1; }
+        .hero-photo-badge small { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 40px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; border: none; cursor: pointer; transition: all 0.3s; border-radius: 4px; }
+        .btn-primary { background: #c9a961; color: #1e3a5f; box-shadow: 0 8px 20px rgba(201,169,97,0.3); }
+        .btn-primary:hover { background: #b8985a; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(201,169,97,0.4); }
+        .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); }
+        .btn-outline:hover { border-color: #c9a961; color: #c9a961; }
+        
+        section { padding: 100px 30px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 70px; }
+        .section-title .subtitle { color: #c9a961; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; font-weight: 600; }
+        .section-title h2 { font-size: 44px; color: #1e3a5f; font-weight: 700; position: relative; display: inline-block; }
+        .section-title h2::after { content: ''; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: #c9a961; }
+        .section-title p { color: #6b7785; margin-top: 30px; max-width: 650px; margin-left: auto; margin-right: auto; font-size: 16px; }
+        
+        .about { background: #fff; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 70px; align-items: center; }
+        .about-photo { position: relative; }
+        .about-photo img { width: 100%; height: 550px; object-fit: cover; border-radius: 4px; box-shadow: 0 20px 50px rgba(30,58,95,0.15); }
+        .about-photo::before { content: ''; position: absolute; top: -20px; right: -20px; width: 100%; height: 100%; border: 3px solid #c9a961; border-radius: 4px; z-index: -1; }
+        .about-content .subtitle { color: #c9a961; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; font-weight: 600; }
+        .about-content h2 { font-size: 40px; margin-bottom: 25px; line-height: 1.2; }
+        .about-content p { color: #5a6978; margin-bottom: 20px; font-size: 16px; }
+        .credentials { margin-top: 35px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .credential { display: flex; gap: 15px; padding: 20px; background: #f5f7fa; border-radius: 4px; border-left: 3px solid #c9a961; }
+        .credential i { color: #c9a961; font-size: 24px; flex-shrink: 0; }
+        .credential strong { display: block; color: #1e3a5f; margin-bottom: 4px; font-size: 15px; }
+        .credential span { color: #6b7785; font-size: 13px; }
+        
+        .specializations { background: #1e3a5f; color: #fff; }
+        .specializations .section-title h2 { color: #fff; }
+        .specializations .section-title .subtitle { color: #c9a961; }
+        .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .spec-card { background: rgba(255,255,255,0.05); padding: 40px 30px; border-radius: 4px; border: 1px solid rgba(201,169,97,0.2); transition: all 0.3s; text-align: center; min-width: 0; }
+        .spec-card:hover { background: rgba(201,169,97,0.1); transform: translateY(-8px); border-color: #c9a961; }
+        .spec-icon { width: 70px; height: 70px; margin: 0 auto 25px; background: rgba(201,169,97,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #c9a961; }
+        .spec-card h3 { color: #fff; font-size: 20px; margin-bottom: 15px; font-weight: 700; }
+        .spec-card p { color: #a0aab5; font-size: 14px; line-height: 1.7; }
+        
+        .services { background: #fff; }
+        .services-list { max-width: 900px; margin: 0 auto; }
+        .service-item { display: grid; grid-template-columns: auto 1fr auto; gap: 30px; padding: 30px 0; border-bottom: 1px solid #e5eaf0; align-items: center; transition: all 0.3s; }
+        .service-item:hover { padding-left: 15px; background: #f8fafc; }
+        .service-item:last-child { border-bottom: none; }
+        .service-num { font-family: 'Merriweather', serif; font-size: 28px; color: #c9a961; font-weight: 900; width: 50px; }
+        .service-info h3 { font-size: 20px; color: #1e3a5f; margin-bottom: 8px; font-weight: 700; }
+        .service-info p { color: #6b7785; font-size: 14px; }
+        .service-price { text-align: right; }
+        .service-price .from { display: block; color: #a0aab5; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+        .service-price strong { font-family: 'Merriweather', serif; font-size: 22px; color: #c9a961; font-weight: 700; }
+        
+        .faq { background: #f5f7fa; }
+        .faq-list { max-width: 850px; margin: 0 auto; }
+        .faq-item { background: #fff; margin-bottom: 15px; border-radius: 4px; overflow: hidden; border-left: 4px solid #c9a961; box-shadow: 0 2px 10px rgba(30,58,95,0.05); }
+        .faq-question { padding: 25px 30px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; gap: 14px; }
+        .faq-question:hover { background: #f8fafc; }
+        .faq-question h3 { font-size: 17px; color: #1e3a5f; font-weight: 600; flex: 1; font-family: 'Inter', sans-serif; }
+        .faq-question i { color: #c9a961; font-size: 18px; transition: transform 0.3s; flex-shrink: 0; }
+        .faq-answer { padding: 0 30px; max-height: 0; overflow: hidden; transition: all 0.4s; }
+        .faq-answer p { color: #5a6978; padding-bottom: 25px; line-height: 1.7; }
+        .faq-item.active .faq-question { background: #f8fafc; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-item.active .faq-answer { max-height: 300px; }
+        
+        .contact { background: #1e3a5f; color: #fff; }
+        .contact .section-title h2 { color: #fff; }
+        .contact .section-title .subtitle { color: #c9a961; }
+        .contact .section-title p { color: #a0aab5; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .contact-info h3 { color: #fff; font-size: 24px; margin-bottom: 30px; }
+        .contact-item { display: flex; gap: 20px; margin-bottom: 30px; align-items: flex-start; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 4px; border-left: 3px solid #c9a961; }
+        .contact-item i { font-size: 24px; color: #c9a961; flex-shrink: 0; margin-top: 3px; }
+        .contact-item strong { display: block; color: #c9a961; margin-bottom: 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-item span, .contact-item a { color: #fff; font-size: 16px; line-height: 1.6; text-decoration: none; }
+        .contact-item a:hover { color: #c9a961; }
+        .contact-form { background: #fff; padding: 45px; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
+        .contact-form h3 { color: #1e3a5f; font-size: 26px; margin-bottom: 10px; }
+        .contact-form > p { color: #6b7785; margin-bottom: 30px; font-size: 14px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; color: #1e3a5f; font-size: 13px; font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 18px; background: #f5f7fa; border: 2px solid #e5eaf0; color: #2a3847; font-family: inherit; font-size: 16px; transition: border-color 0.3s; border-radius: 4px; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #c9a961; background: #fff; }
+        .form-group textarea { resize: vertical; min-height: 110px; }
+        .privacy-note { font-size: 12px; color: #a0aab5; margin-top: 15px; text-align: center; }
+        
+        footer { background: #152a44; color: #a0aab5; padding: 40px 30px 25px; text-align: center; }
+        footer .logo { color: #c9a961; margin-bottom: 15px; font-size: 20px; }
+        footer .logo span { color: #a0aab5; font-size: 12px; }
+        footer p { font-size: 13px; margin-bottom: 15px; line-height: 1.6; }
+        .footer-socials { display: flex; justify-content: center; gap: 12px; margin: 20px 0; }
+        .footer-socials a { width: 44px; height: 44px; background: rgba(201,169,97,0.1); color: #c9a961; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 50%; transition: all 0.3s; font-size: 17px; }
+        .footer-socials a:hover { background: #c9a961; color: #1e3a5f; }
+        .copyright { padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: #6b7785; }
+        
+        /* ========== ПЛАНШЕТ (до 968px) ========== */
+        @media (max-width: 968px) {
+            nav { padding: 12px 0; }
+            .nav-container { padding: 0 20px; }
+            .logo { font-size: 19px; }
+            .logo span { font-size: 11px; }
+            .menu-toggle { display: block; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #1e3a5f; flex-direction: column; gap: 0; padding: 8px 0 14px; border-top: 1px solid rgba(201,169,97,0.25); box-shadow: 0 14px 30px rgba(0,0,0,0.25); }
             .nav-links.open { display: flex; }
-            .nav-links li a { display: block; padding: 11px 24px; font-size: 14px; }
-            .hero { padding: 74px 14px 24px; }
-            .hero h1 { margin-bottom: 9px; }
-            .hero-sub { font-size: 13.5px; margin-bottom: 14px; }
-            .hero-btns .btn { flex: 1; min-width: 140px; padding: 11px 16px; }
-            .hero-stats { gap: 16px; }
-            .hero-stat b { font-size: 20px; }
-            .hero-photo img { height: 220px; }
-            .hero-float { bottom: 10px; left: 10px; padding: 8px 11px; }
-            .sec { padding: 24px 14px; }
-            .sec-head { margin-bottom: 14px; }
-            .sec-head p { font-size: 12.5px; margin-top: 12px; }
-            .adv-item { padding: 10px 14px; gap: 8px; }
-            .adv-item b { font-size: 12px; }
-            .adv-item span { font-size: 10px; }
-            .services-grid { grid-template-columns: 1fr; gap: 9px; }
-            .srv-card { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; gap: 3px 12px; padding: 13px 14px; }
-            .srv-icon { grid-row: 1 / 3; width: 42px; height: 42px; font-size: 17px; margin-bottom: 0; align-self: center; }
-            .srv-card h3 { margin-bottom: 2px; font-size: 14.5px; }
-            .srv-card p { margin-bottom: 5px; font-size: 12px; }
-            .price-table { padding: 8px 14px; }
-            .price-row { font-size: 13px; padding: 9px 0; gap: 10px; }
-            .price-row .name i { margin-right: 6px; }
-            .about-photo img { height: 220px; }
-            .about-feats { grid-template-columns: 1fr; }
-            .doc-grid { grid-template-columns: 1fr; gap: 10px; }
-            .doc-card { display: grid; grid-template-columns: 96px 1fr; text-align: left; }
-            .doc-photo { height: 100%; min-height: 130px; }
-            .doc-info { padding: 12px 14px; align-self: center; }
-            .gal-grid { gap: 8px; }
-            .form-card { padding: 16px 14px; }
-            .f-row2 { grid-template-columns: 1fr; gap: 0; }
-            .c-item { padding: 10px 12px; }
-            .c-item span, .c-item a { font-size: 13px; }
+            .nav-links li a { display: block; padding: 13px 24px; font-size: 15px; }
+            .nav-phone { display: none; }
+            
+            section { scroll-margin-top: 62px; }
+            .hero { min-height: auto; padding: 100px 20px 50px; }
+            .hero-container { grid-template-columns: 1fr; gap: 34px; }
+            .hero h1 { font-size: 34px; margin-bottom: 18px; }
+            .hero h1 span { font-size: 20px; }
+            .hero p { font-size: 16px; margin-bottom: 26px; }
+            .hero-photo img { height: 380px; }
+            .hero-photo-badge { bottom: -18px; left: 18px; padding: 13px 20px; }
+            .hero-photo-badge strong { font-size: 21px; }
+            .hero-photo-badge small { font-size: 10px; }
+            .hero-stats { gap: 18px; margin-top: 28px; padding-top: 28px; }
+            .hero-stat .number { font-size: 30px; }
+            .hero-stat .label { font-size: 11px; }
+            
+            section { padding: 60px 20px; }
+            .section-title { margin-bottom: 42px; }
+            .section-title h2 { font-size: 32px; }
+            .section-title p { font-size: 15px; margin-top: 22px; }
+            
+            .about-grid { grid-template-columns: 1fr; gap: 36px; }
+            .about-photo::before { display: none; }
+            .about-photo img {
+                height: 340px;
+                border: 4px solid rgba(201,169,97,0.3);
+                border-radius: 4px;
+                box-shadow: 0 20px 50px rgba(30,58,95,0.15);
+            }
+            .about-content h2 { font-size: 30px; }
+            
+            .spec-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .spec-card { padding: 28px 18px; }
+            .spec-icon { width: 58px; height: 58px; font-size: 24px; margin-bottom: 18px; }
+            .spec-card h3 { font-size: 17px; margin-bottom: 10px; }
+            
+            .service-item { grid-template-columns: auto 1fr; gap: 14px; padding: 22px 0; }
+            .service-num { font-size: 22px; width: 38px; }
+            .service-info h3 { font-size: 18px; }
+            .service-price { grid-column: 1 / -1; text-align: left; margin-top: 2px; }
+            .service-price .from { display: inline; margin-right: 5px; }
+            
+            .faq-question { padding: 20px 22px; }
+            .faq-answer { padding: 0 22px; }
+            .faq-item.active .faq-answer { max-height: 400px; }
+            
+            .contact-grid { grid-template-columns: 1fr; gap: 34px; }
+            .contact-form { padding: 30px 24px; }
         }
-
-        @media (max-width: 420px) {
-            .adv-inner { grid-template-columns: 1fr; }
-            .hero-stats { flex-wrap: wrap; gap: 12px 20px; }
+        
+        /* ========== СМАРТФОН (до 640px) ========== */
+        @media (max-width: 640px) {
+            nav { padding: 10px 0; }
+            .nav-container { padding: 0 14px; }
+            .logo { font-size: 17px; }
+            .logo span { font-size: 10px; letter-spacing: 1.5px; }
+            .menu-toggle { font-size: 22px; }
+            .nav-links li a { padding: 14px 20px; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+            .nav-links li:last-child a { border-bottom: none; }
+            
+            section { scroll-margin-top: 56px; }
+            .hero { padding: 88px 14px 40px; }
+            .hero-badge { font-size: 11px; padding: 6px 13px; letter-spacing: 1.2px; margin-bottom: 16px; }
+            .hero h1 { font-size: 27px; margin-bottom: 14px; }
+            .hero h1 span { font-size: 17px; margin-top: 6px; }
+            .hero p { font-size: 14.5px; margin-bottom: 20px; }
+            .hero-btns { flex-direction: column; gap: 10px; }
+            .hero-btns .btn { width: 100%; padding: 15px 20px; font-size: 13px; letter-spacing: 1.2px; }
+            .hero-stats { gap: 10px; margin-top: 22px; padding-top: 22px; }
+            .hero-stat .number { font-size: 22px; }
+            .hero-stat .label { font-size: 9.5px; letter-spacing: 0.5px; }
+            .hero-photo img { height: 280px; border-width: 3px; }
+            /* Бейдж "15 лет" теперь ВНУТРИ рамки, не торчит */
+            .hero-photo-badge { bottom: 16px; left: 16px; padding: 10px 15px; }
+            .hero-photo-badge strong { font-size: 18px; }
+            .hero-photo-badge small { font-size: 9px; }
+            
+            section { padding: 44px 14px; }
+            .section-title { margin-bottom: 30px; }
+            .section-title .subtitle { font-size: 11px; letter-spacing: 2px; margin-bottom: 10px; }
+            .section-title h2 { font-size: 25px; }
+            .section-title h2::after { bottom: -10px; width: 44px; }
+            .section-title p { font-size: 13.5px; margin-top: 16px; }
+            
+            /* about.jpg теперь с видимой золотой рамкой */
+            .about-photo img {
+                height: 250px;
+                border: 3px solid rgba(201,169,97,0.3);
+                border-radius: 4px;
+                box-shadow: 0 15px 35px rgba(30,58,95,0.15);
+            }
+            .about-content h2 { font-size: 23px; margin-bottom: 16px; }
+            .about-content p { font-size: 14px; margin-bottom: 14px; }
+            .credentials { grid-template-columns: 1fr; gap: 12px; margin-top: 22px; }
+            .credential { padding: 15px; gap: 12px; }
+            .credential i { font-size: 20px; }
+            .credential strong { font-size: 14px; }
+            .credential span { font-size: 12px; }
+            
+            .spec-grid { grid-template-columns: 1fr; gap: 12px; }
+            .spec-card { padding: 24px 18px; }
+            
+            .service-item { gap: 10px; padding: 18px 0; }
+            .service-num { font-size: 18px; width: 30px; }
+            .service-info h3 { font-size: 16px; margin-bottom: 5px; }
+            .service-info p { font-size: 13px; }
+            .service-price strong { font-size: 18px; }
+            
+            .faq-item { margin-bottom: 10px; }
+            .faq-question { padding: 16px 16px; }
+            .faq-question h3 { font-size: 14.5px; }
+            .faq-question i { font-size: 15px; }
+            .faq-answer { padding: 0 16px; }
+            .faq-answer p { font-size: 13.5px; padding-bottom: 18px; }
+            .faq-item.active .faq-answer { max-height: 500px; }
+            
+            .contact-info h3 { font-size: 20px; margin-bottom: 18px; }
+            .contact-item { padding: 15px; gap: 14px; margin-bottom: 12px; }
+            .contact-item i { font-size: 19px; }
+            .contact-item strong { font-size: 11px; margin-bottom: 3px; }
+            .contact-item span, .contact-item a { font-size: 14px; }
+            .contact-form { padding: 22px 16px; }
+            .contact-form h3 { font-size: 21px; }
+            .contact-form > p { font-size: 12.5px; margin-bottom: 20px; }
+            .form-group { margin-bottom: 15px; }
+            .form-group label { font-size: 11px; margin-bottom: 6px; }
+            .form-group input, .form-group select, .form-group textarea { padding: 12px 14px; }
+            .form-group textarea { min-height: 90px; }
+            .contact-form .btn { width: 100%; padding: 15px 18px; font-size: 13px; }
+            
+            footer { padding: 30px 16px 20px; }
+            footer .logo { font-size: 17px; }
+            footer p { font-size: 12px; }
+            .footer-socials { gap: 10px; margin: 16px 0; }
+            .copyright { padding-top: 16px; font-size: 11px; }
+        }
+        
+        /* ========== МАЛЕНЬКИЙ ЭКРАН (до 380px) ========== */
+        @media (max-width: 380px) {
+            .hero h1 { font-size: 24px; }
+            .hero-stats { grid-template-columns: 1fr 1fr; }
+            .hero-stat:last-child { grid-column: 1 / -1; }
+            .logo { font-size: 15px; }
+            .logo span { font-size: 9px; }
         }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="nav-container">
-            <div class="logo">ДЕНТИКА<small>частная стоматология</small></div>
-            <button class="burger" id="burger" aria-label="Меню"><i class="fas fa-bars"></i></button>
+            <div class="logo">
+                ИП ПЕТРОВ А.В.
+                <span>Юридические услуги</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links" id="navLinks">
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#specializations">Специализации</a></li>
                 <li><a href="#services">Услуги</a></li>
-                <li><a href="#prices">Цены</a></li>
-                <li><a href="#about">О клинике</a></li>
-                <li><a href="#doctors">Врачи</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
-            <a href="tel:+79991234567" class="nav-phone"><i class="fas fa-phone"></i>+7 (999) 123-45-67</a>
+            <a href="tel:+79991234567" class="nav-phone"><i class="fas fa-phone"></i> +7 (999) 123-45-67</a>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-inner">
-            <div>
-                <div class="hero-badge"><i class="fas fa-tooth"></i> Частная стоматологическая клиника</div>
-                <h1>Здоровая улыбка — <span>без боли и страха</span></h1>
-                <p class="hero-sub">Лечение, имплантация и эстетика зубов на оборудовании экспертного класса. Безболезненно, с гарантией до 5 лет и честными ценами.</p>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">★ Адвокат с 15-летним опытом</div>
+                <h1>Защищаю ваши права <span>профессионально и честно</span></h1>
+                <p>Персональный юрист для физических и юридических лиц. Решение сложных правовых вопросов без посредников — работаю напрямую с каждым клиентом.</p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Записаться на приём</a>
-                    <a href="#prices" class="btn btn-outline"><i class="fas fa-ruble-sign"></i> Смотреть цены</a>
+                    <a href="#contact" class="btn btn-primary">
+                        Бесплатная консультация
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#services" class="btn btn-outline">Мои услуги</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="hero-stat"><b>12 лет</b><span>работаем</span></div>
-                    <div class="hero-stat"><b>15 000+</b><span>пациентов</span></div>
-                    <div class="hero-stat"><b>8</b><span>врачей</span></div>
-                    <div class="hero-stat"><b>до 5 лет</b><span>гарантия</span></div>
+                    <div class="hero-stat">
+                        <div class="number">15+</div>
+                        <div class="label">Лет практики</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="number">850+</div>
+                        <div class="label">Выигранных дел</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="number">97%</div>
+                        <div class="label">Положительных решений</div>
+                    </div>
                 </div>
             </div>
             <div class="hero-photo">
-                <img src="images/hero.jpg" alt="Клиника ДЕНТИКА" onerror="this.style.display='none'">
-                <div class="photo-fallback"><i class="fas fa-tooth"></i><span>фото клиники</span></div>
-                <div class="hero-float">
-                    <i class="fas fa-user-doctor"></i>
-                    <div><b>Первая консультация</b><span>бесплатно + план лечения</span></div>
+                <img src="images/hero.jpg" alt="Адвокат Петров А.В.">
+                <div class="hero-photo-badge">
+                    <strong>15 лет</strong>
+                    <small>в юридической практике</small>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ПРЕИМУЩЕСТВА -->
-    <div class="adv">
-        <div class="adv-inner">
-            <div class="adv-item"><i class="fas fa-syringe"></i><div><b>Безболезненно</b><span>современная анестезия</span></div></div>
-            <div class="adv-item"><i class="fas fa-microscope"></i><div><b>Точная диагностика</b><span>3D-томограф</span></div></div>
-            <div class="adv-item"><i class="fas fa-shield-heart"></i><div><b>Стерильно</b><span>европротокол обработки</span></div></div>
-            <div class="adv-item"><i class="fas fa-file-invoice"></i><div><b>Честные цены</b><span>смета фиксируется до лечения</span></div></div>
-        </div>
-    </div>
-
-    <!-- УСЛУГИ -->
-    <section class="sec" id="services">
-        <div class="sec-inner">
-            <div class="sec-head">
-                <span class="kicker">Наши услуги</span>
-                <h2>Полный спектр стоматологии</h2>
-                <p>От лечения кариеса до имплантации и голливудской улыбки — всё в одной клинике.</p>
-            </div>
-            <div class="services-grid">
-                <div class="srv-card">
-                    <div class="srv-icon"><i class="fas fa-tooth"></i></div>
-                    <div>
-                        <h3>Терапия и лечение кариеса</h3>
-                        <p>Лечение каналов под микроскопом, эстетические реставрации.</p>
-                        <span class="srv-price">от 3 500 ₽</span>
-                    </div>
-                </div>
-                <div class="srv-card">
-                    <div class="srv-icon"><i class="fas fa-teeth"></i></div>
-                    <div>
-                        <h3>Имплантация</h3>
-                        <p>Имплантаты Osstem и Straumann, приживление 99,2%. Навигация 3D.</p>
-                        <span class="srv-price">от 25 000 ₽</span>
-                    </div>
-                </div>
-                <div class="srv-card">
-                    <div class="srv-icon"><i class="fas fa-sun"></i></div>
-                    <div>
-                        <h3>Отбеливание</h3>
-                        <p>ZOOM 4 — до 8 тонов за один визит, безопасно для эмали.</p>
-                        <span class="srv-price">от 12 000 ₽</span>
-                    </div>
-                </div>
-                <div class="srv-card">
-                    <div class="srv-icon"><i class="fas fa-smile"></i></div>
-                    <div>
-                        <h3>Ортодонтия</h3>
-                        <p>Брекеты и элайнеры для детей и взрослых. Ровные зубы без боли.</p>
-                        <span class="srv-price">от 45 000 ₽</span>
-                    </div>
-                </div>
-                <div class="srv-card">
-                    <div class="srv-icon"><i class="fas fa-shower"></i></div>
-                    <div>
-                        <h3>Гигиена и профилактика</h3>
-                        <p>Ультразвук + Air Flow, полировка, фторирование, герметизация.</p>
-                        <span class="srv-price">от 4 500 ₽</span>
-                    </div>
-                </div>
-                <div class="srv-card">
-                    <div class="srv-icon"><i class="fas fa-child"></i></div>
-                    <div>
-                        <h3>Детская стоматология</h3>
-                        <p>Лечение без слёз и страха. Игровая форма, добрые врачи.</p>
-                        <span class="srv-price">от 2 000 ₽</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ЦЕНЫ -->
-    <section class="sec prices" id="prices">
-        <div class="sec-inner">
-            <div class="sec-head">
-                <span class="kicker">Стоимость</span>
-                <h2>Прозрачные цены</h2>
-                <p>Итоговая смета фиксируется до начала лечения — никаких доплат «по ходу».</p>
-            </div>
-            <div class="price-table">
-                <div class="price-row"><div class="name"><i class="fas fa-stethoscope"></i>Консультация + план лечения</div><div class="cost">бесплатно</div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-tooth"></i>Лечение кариеса</div><div class="cost">от 3 500 ₽</div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-shower"></i>Профессиональная гигиена (УЗ + Air Flow)</div><div class="cost">от 4 500 ₽</div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-teeth"></i>Имплантат Osstem с установкой</div><div class="cost">от 25 000 ₽</div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-crown"></i>Коронка из диоксида циркония</div><div class="cost">от 18 000 ₽</div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-star"></i>Виниры E-max</div><div class="cost">от 25 000 ₽</div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-sun"></i>Отбеливание ZOOM 4</div><div class="cost">от 12 000 ₽</div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-smile"></i>Брекеты под ключ (2 челюсти)</div><div class="cost">от 45 000 ₽</div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-child"></i>Детский приём + фторирование</div><div class="cost">от 2 000 ₽</div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-user-doctor"></i>Удаление зуба любой сложности</div><div class="cost">от 3 000 ₽</div></div>
-            </div>
-            <p class="price-note">* Точную стоимость врач назовёт на бесплатной консультации после осмотра.</p>
-        </div>
-    </section>
-
-    <!-- О КЛИНИКЕ -->
-    <section class="sec" id="about">
-        <div class="sec-inner">
+    <section class="about" id="about">
+        <div class="container">
             <div class="about-grid">
                 <div class="about-photo">
-                    <img src="images/about.jpg" alt="Интерьер клиники" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-hospital"></i><span>фото интерьера</span></div>
+                    <img src="images/about.jpg" alt="Рабочий кабинет">
                 </div>
-                <div class="about-text">
-                    <span class="kicker">О клинике</span>
-                    <h2>Стоматология, куда хочется возвращаться</h2>
-                    <p>«ДЕНТИКА» — частная клиника в центре Москвы. 12 лет мы лечим зубы так, чтобы пациенты приходили снова и приводили семью: без боли, без навязывания лишнего и с фиксированной сметой.</p>
-                    <p>Каждый кабинет оснащён 3D-томографом, микроскопом и системами цифровой диагностики. Все инструменты проходят тройную стерилизацию по европейскому протоколу.</p>
-                    <div class="about-feats">
-                        <div class="about-feat"><i class="fas fa-circle-check"></i> Гарантия до 5 лет по договору</div>
-                        <div class="about-feat"><i class="fas fa-circle-check"></i> Рассрочка 0% на 6 месяцев</div>
-                        <div class="about-feat"><i class="fas fa-circle-check"></i> Лечение в день обращения</div>
-                        <div class="about-feat"><i class="fas fa-circle-check"></i> Приём детей с 2 лет</div>
+                <div class="about-content">
+                    <div class="subtitle">Обо мне</div>
+                    <h2>Петров Алексей Викторович</h2>
+                    <p>Юрист с 15-летним опытом работы в области гражданского, семейного и корпоративного права. Член Адвокатской палаты г. Москвы.</p>
+                    <p>За годы практики помог более 850 клиентам защитить свои права и интересы в судах всех инстанций. Работаю индивидуально с каждым — никаких посредников и помощников, только прямое взаимодействие.</p>
+                    <div class="credentials">
+                        <div class="credential">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>МГУ им. Ломоносова</strong>
+                                <span>Юридический факультет, 2008 г.</span>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <strong>Адвокатский статус</strong>
+                                <span>Рег. номер 77/12345</span>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <strong>Награды</strong>
+                                <span>Лучший юрист 2023 года</span>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <strong>Публикации</strong>
+                                <span>Автор 30+ статей</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ВРАЧИ -->
-    <section class="sec doctors" id="doctors">
-        <div class="sec-inner">
-            <div class="sec-head">
-                <span class="kicker">Команда</span>
-                <h2>Наши врачи</h2>
-                <p>Каждый специалист — с профильным образованием и опытом от 8 лет.</p>
+    <section class="specializations" id="specializations">
+        <div class="container">
+            <div class="section-title">
+                <div class="subtitle">Специализации</div>
+                <h2>В чём я могу помочь</h2>
             </div>
-            <div class="doc-grid">
-                <div class="doc-card">
-                    <div class="doc-photo">
-                        <img src="images/doctor1.jpg" alt="Анна Соколова" onerror="this.style.display='none'">
-                        <div class="photo-fallback"><i class="fas fa-user-doctor"></i><span>фото врача</span></div>
+            <div class="spec-grid">
+                <div class="spec-card">
+                    <div class="spec-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>Гражданские споры</h3>
+                    <p>Защита прав потребителей, споры с застройщиками, возмещение ущерба, наследственные дела.</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon"><i class="fas fa-users"></i></div>
+                    <h3>Семейное право</h3>
+                    <p>Разводы, раздел имущества, алименты, определение места жительства детей, брачные договоры.</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon"><i class="fas fa-home"></i></div>
+                    <h3>Недвижимость</h3>
+                    <p>Сопровождение сделок, проверка объектов, споры с соседями, оспаривание кадастровой стоимости.</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Бизнес и ИП</h3>
+                    <p>Регистрация бизнеса, договорная работа, налоговые споры, защита от проверок.</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>Банкротство</h3>
+                    <p>Банкротство физических лиц и ИП. Списание долгов под ключ с гарантией результата.</p>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Трудовые споры</h3>
+                    <p>Незаконное увольнение, невыплата зарплаты, восстановление на работе, компенсации.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <div class="subtitle">Стоимость</div>
+                <h2>Прозрачные цены</h2>
+                <p>Фиксированная стоимость без скрытых платежей. Вы платите только за результат.</p>
+            </div>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-num">01</div>
+                    <div class="service-info">
+                        <h3>Устная консультация</h3>
+                        <p>Подробный разбор вашей ситуации, оценка перспектив, план действий.</p>
                     </div>
-                    <div class="doc-info">
-                        <h3>Анна Соколова</h3>
-                        <div class="doc-role">Главврач · Терапевт</div>
-                        <p>12 лет опыта. Лечение каналов под микроскопом, эстетические реставрации.</p>
+                    <div class="service-price">
+                        <span class="from">от</span>
+                        <strong>2 000 ₽</strong>
                     </div>
                 </div>
-                <div class="doc-card">
-                    <div class="doc-photo">
-                        <img src="images/doctor2.jpg" alt="Игорь Волков" onerror="this.style.display='none'">
-                        <div class="photo-fallback"><i class="fas fa-user-doctor"></i><span>фото врача</span></div>
+                <div class="service-item">
+                    <div class="service-num">02</div>
+                    <div class="service-info">
+                        <h3>Письменное заключение</h3>
+                        <p>Детальный правовой анализ со ссылками на законы и судебную практику.</p>
                     </div>
-                    <div class="doc-info">
-                        <h3>Игорь Волков</h3>
-                        <div class="doc-role">Имплантолог · Хирург</div>
-                        <p>15 лет опыта. Более 3 000 установленных имплантатов, сложные случаи.</p>
+                    <div class="service-price">
+                        <span class="from">от</span>
+                        <strong>5 000 ₽</strong>
                     </div>
                 </div>
-                <div class="doc-card">
-                    <div class="doc-photo">
-                        <img src="images/doctor3.jpg" alt="Мария Лебедева" onerror="this.style.display='none'">
-                        <div class="photo-fallback"><i class="fas fa-user-doctor"></i><span>фото врача</span></div>
+                <div class="service-item">
+                    <div class="service-num">03</div>
+                    <div class="service-info">
+                        <h3>Составление документов</h3>
+                        <p>Исковые заявления, жалобы, договоры, претензии, ходатайства.</p>
                     </div>
-                    <div class="doc-info">
-                        <h3>Мария Лебедева</h3>
-                        <div class="doc-role">Ортодонт</div>
-                        <p>8 лет опыта. Брекеты и элайнеры для детей и взрослых.</p>
+                    <div class="service-price">
+                        <span class="from">от</span>
+                        <strong>3 500 ₽</strong>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-num">04</div>
+                    <div class="service-info">
+                        <h3>Представительство в суде</h3>
+                        <p>Полное ведение дела от подготовки до получения решения.</p>
+                    </div>
+                    <div class="service-price">
+                        <span class="from">от</span>
+                        <strong>30 000 ₽</strong>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-num">05</div>
+                    <div class="service-info">
+                        <h3>Банкротство под ключ</h3>
+                        <p>Полное сопровождение процедуры списания долгов с гарантией.</p>
+                    </div>
+                    <div class="service-price">
+                        <span class="from">от</span>
+                        <strong>80 000 ₽</strong>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-num">06</div>
+                    <div class="service-info">
+                        <h3>Юридическое сопровождение</h3>
+                        <p>Абонентское обслуживание для бизнеса — от 20 часов в месяц.</p>
+                    </div>
+                    <div class="service-price">
+                        <span class="from">от</span>
+                        <strong>25 000 ₽/мес</strong>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ГАЛЕРЕЯ -->
-    <section class="sec" id="gallery">
-        <div class="sec-inner">
-            <div class="sec-head">
-                <span class="kicker">Интерьер</span>
-                <h2>Как мы выглядим</h2>
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <div class="subtitle">FAQ</div>
+                <h2>Частые вопросы</h2>
             </div>
-            <div class="gal-grid">
-                <div class="gal-item">
-                    <img src="images/clinic1.jpg" alt="Кабинет" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-hospital-user"></i><span>кабинет</span></div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Консультация действительно бесплатная?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, первая консультация по телефону или в офисе — бесплатна. На ней я разберу вашу ситуацию, оценю перспективы и расскажу, как можем решить вопрос. Платите только если решите работать дальше.</p>
+                    </div>
                 </div>
-                <div class="gal-item">
-                    <img src="images/clinic2.jpg" alt="Оборудование" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-microscope"></i><span>оборудование</span></div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Работаете ли вы с другими городами?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, работаю удалённо со всей Россией. Консультации провожу по видеосвязи, документы подписываем электронно. В суды могу выезжать в любой регион по договорённости.</p>
+                    </div>
                 </div>
-                <div class="gal-item">
-                    <img src="images/clinic3.jpg" alt="Зона ожидания" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-couch"></i><span>зона ожидания</span></div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Как гарантируете результат?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Заключаем официальный договор с прописанными обязательствами и стоимостью. Если я вижу, что дело бесперспективное — честно скажу об этом на консультации, не буду брать деньги зря.</p>
+                    </div>
                 </div>
-                <div class="gal-item">
-                    <img src="images/clinic4.jpg" alt="Стерилизация" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-pump-medical"></i><span>стерилизация</span></div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Можно ли оплатить услуги в рассрочку?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, для крупных дел (банкротство, сложные судебные процессы) предусмотрена рассрочка на 3-6 месяцев без процентов. Обсуждаем индивидуально на консультации.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Сколько времени занимает решение вопроса?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Зависит от типа дела. Консультация — 1 день. Составление документов — 2-5 дней. Судебные дела — от 2 до 6 месяцев. Банкротство — 6-9 месяцев. Точные сроки называю после анализа ситуации.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Работаете с юридическими лицами?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, сопровождаю ИП и ООО на постоянной основе: договорная работа, налоги, проверки, споры с контрагентами. Есть абонентское обслуживание от 25 000 ₽/месяц.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ОТЗЫВЫ -->
-    <section class="sec reviews" id="reviews">
-        <div class="sec-inner">
-            <div class="sec-head">
-                <span class="kicker">Отзывы</span>
-                <h2>Что говорят пациенты</h2>
-            </div>
-            <div class="rev-grid">
-                <div class="rev-card">
-                    <div class="rev-stars">★★★★★</div>
-                    <p>«Боялась стоматологов 20 лет. Здесь вылечила три зуба и даже не заметила укола. Теперь только к Анне!»</p>
-                    <div class="rev-author">
-                        <div class="rev-ava">ЕК</div>
-                        <div><b>Елена К.</b><span>пациент 2 года</span></div>
-                    </div>
-                </div>
-                <div class="rev-card">
-                    <div class="rev-stars">★★★★★</div>
-                    <p>«Ставил два импланта у Игоря. Всё честно: назвали сумму — она не изменилась. Прижилось идеально, спасибо!»</p>
-                    <div class="rev-author">
-                        <div class="rev-ava">ДМ</div>
-                        <div><b>Дмитрий М.</b><span>имплантация, 2026</span></div>
-                    </div>
-                </div>
-                <div class="rev-card">
-                    <div class="rev-stars">★★★★★</div>
-                    <p>«Дочке 5 лет, лечили первый зуб. Врач нашла подход за минуту — ребёнок вышел с шариком и без слёз.»</p>
-                    <div class="rev-author">
-                        <div class="rev-ava">ОС</div>
-                        <div><b>Ольга С.</b><span>детская стоматология</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- КОНТАКТЫ + ФОРМА -->
-    <section class="sec contact" id="contact">
-        <div class="sec-inner">
-            <div class="sec-head">
-                <span class="kicker" style="color:#67e8f9;">Контакты</span>
-                <h2>Запишитесь на бесплатную консультацию</h2>
-                <p>Перезвоним в течение 10 минут, подберём удобное время и врача.</p>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <div class="subtitle">Контакты</div>
+                <h2>Получите консультацию</h2>
+                <p>Оставьте заявку — перезвоню в течение 15 минут и бесплатно проконсультирую по вашей ситуации.</p>
             </div>
             <div class="contact-grid">
-                <div>
-                    <div class="c-item">
+                <div class="contact-info">
+                    <h3>Как со мной связаться</h3>
+                    <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <div><b>Телефон</b><a href="tel:+79991234567">+7 (999) 123-45-67</a></div>
+                        <div>
+                            <strong>Телефон</strong>
+                            <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                        </div>
                     </div>
-                    <div class="c-item">
-                        <i class="fas fa-location-dot"></i>
-                        <div><b>Адрес</b><span>г. Москва, Ленинский проспект, 45<br>5 минут от м. Ленинский проспект</span></div>
-                    </div>
-                    <div class="c-item">
-                        <i class="fas fa-clock"></i>
-                        <div><b>Режим работы</b><span>Ежедневно: 9:00 — 21:00, без выходных</span></div>
-                    </div>
-                    <div class="c-item">
+                    <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <div><b>Email</b><span>info@dentika-clinic.ru</span></div>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:petrov@law-office.ru">petrov@law-office.ru</a>
+                        </div>
                     </div>
-                    <div class="c-socials">
-                        <a href="https://wa.me/79991234567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://t.me/your_clinic" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                        <a href="https://vk.com/your_clinic" target="_blank" aria-label="ВК"><i class="fab fa-vk"></i></a>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Офис</strong>
+                            <span>г. Москва, ул. Тверская, 15<br>Бизнес-центр «Столица», офис 412</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>График работы</strong>
+                            <span>Пн-Пт: 9:00 — 19:00<br>Сб: 10:00 — 15:00 (по записи)</span>
+                        </div>
                     </div>
                 </div>
-                <div class="form-card">
-                    <h3>Запись на приём</h3>
-                    <p>Заполните форму — перезвоним в течение 10 минут</p>
+                <div class="contact-form">
+                    <h3>Оставить заявку</h3>
+                    <p>Заполните форму — перезвоню в течение 15 минут</p>
                     <form action="https://formspree.io/f/xvkkbvpd" method="POST">
-                        <input type="hidden" name="_subject" value="Запись на приём — клиника ДЕНТИКА">
-                        <div class="f-row2">
-                            <div class="f-group">
-                                <label>Ваше имя</label>
-                                <input type="text" name="name" required placeholder="Мария">
-                            </div>
-                            <div class="f-group">
-                                <label>Телефон</label>
-                                <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__">
-                            </div>
+                        <input type="hidden" name="_subject" value="Новая заявка с сайта юриста">
+                        <div class="form-group">
+                            <label>Ваше имя</label>
+                            <input type="text" name="name" required>
                         </div>
-                        <div class="f-group">
-                            <label>Услуга</label>
-                            <select name="service">
-                                <option>Консультация (бесплатно)</option>
-                                <option>Лечение кариеса</option>
-                                <option>Имплантация</option>
-                                <option>Отбеливание</option>
-                                <option>Брекеты / элайнеры</option>
-                                <option>Гигиена и чистка</option>
-                                <option>Детский приём</option>
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Тип вопроса</label>
+                            <select name="question">
+                                <option>Гражданский спор</option>
+                                <option>Семейное право</option>
+                                <option>Недвижимость</option>
+                                <option>Бизнес и ИП</option>
+                                <option>Банкротство</option>
+                                <option>Трудовой спор</option>
+                                <option>Другое</option>
                             </select>
                         </div>
-                        <div class="f-group">
-                            <label>Комментарий</label>
-                            <textarea name="message" placeholder="Удобное время, что беспокоит..."></textarea>
+                        <div class="form-group">
+                            <label>Кратко опишите ситуацию</label>
+                            <textarea name="message" placeholder="Расскажите о вашей проблеме..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-calendar-check"></i> Записаться</button>
-                        <p class="privacy">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Отправить заявку
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p class="privacy-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
                     </form>
                 </div>
             </div>
@@ -583,23 +663,47 @@
     </section>
 
     <footer>
-        <div class="logo">ДЕНТИКА<small>частная стоматология</small></div>
-        <p>© 2026 Клиника «ДЕНТИКА». Лицензия № ЛО-77-01-012345. Все права защищены.</p>
+        <div class="logo">
+            ИП ПЕТРОВ А.В.
+            <span>Юридические услуги</span>
+        </div>
+        <p>ИНН 771234567890 · ОГРНИП 312774612345678<br>Член Адвокатской палаты г. Москвы</p>
+        <div class="footer-socials">
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
+        </div>
+        <div class="copyright">© 2026 ИП Петров А.В. Все права защищены.</div>
     </footer>
 
     <script>
         // Бургер-меню
-        const burger = document.getElementById('burger');
+        const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
-        burger.addEventListener('click', () => {
+        menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('open');
-            burger.querySelector('i').className = navLinks.classList.contains('open') ? 'fas fa-xmark' : 'fas fa-bars';
+            menuToggle.querySelector('i').className = navLinks.classList.contains('open') ? 'fas fa-xmark' : 'fas fa-bars';
         });
-        // Закрытие меню при клике на ссылку
-        navLinks.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => {
-                navLinks.classList.remove('open');
-                burger.querySelector('i').className = 'fas fa-bars';
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            menuToggle.querySelector('i').className = 'fas fa-bars';
+        }));
+
+        // FAQ аккордеон
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.parentElement.classList.toggle('active');
+            });
+        });
+        
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
