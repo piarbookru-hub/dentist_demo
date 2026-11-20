@@ -361,7 +361,7 @@ function logout() {
 function showSetup() {
     $('setupScreen').classList.add('active');
     $('iframeWrapper').style.display = 'none';
-    $('hintBanner').style.display = 'none';
+    $('hintBanner').style.display = 'block';
     $('prepareBtn').disabled = false;
     $('prepareBtn').innerHTML = '<i class="fas fa-download"></i> Подготовить страницу';
     $('setupTitle').textContent = 'Подготовка ' + currentFile;
