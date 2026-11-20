@@ -1288,4 +1288,21 @@ $('homeBtn').addEventListener('click', goHome);
 $('openSiteBtn').addEventListener('click', openLiveSite);
 $('deployBadge').addEventListener('click', () => verifyDeploy(repoDeployId, true));
 
+// ===== РЕДАКТИРУЕМЫЙ БАННЕР-ПОДСКАЗКА =====
+(function initHintBanner() {
+    const banner = $('hintBanner');
+    if (!banner) return;
+    // Читаем сохранённый текст из localStorage
+    const saved = ls.get('hintBannerText');
+    if (saved) banner.innerHTML = saved;
+    // Сохраняем при каждом изменении
+    banner.addEventListener('input', () => {
+        ls.set('hintBannerText', banner.innerHTML);
+    });
+    // Подсказка при наведении
+    banner.addEventListener('focus', () => {
+        showStatus('✎ Редактируешь подсказку — изменения сохраняются автоматически', 'info');
+    });
+})();
+
 window.addEventListener('beforeunload', e => { if (Object.keys(pending).length) { e.preventDefault(); e.returnValue = ''; } });
