@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru"><head>
     <meta charset="UTF-8">
-    <meta name="cms-deploy-id" content="dmwpgxe44eflil6">
+    <meta name="cms-deploy-id" content="dmwj03i9v21oz7s">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="google" content="notranslate">
     <meta http-equiv="Content-Language" content="ru">
@@ -32,6 +32,7 @@
     <!-- Мобильные -->
     <meta name="theme-color" content="#0e7490">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="ДЕНТИКА">
     <meta name="format-detection" content="telephone=no">
@@ -42,12 +43,13 @@
     <meta name="geo.position" content="55.7137;37.5852">
     <meta name="ICBM" content="55.7137, 37.5852">
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/cyrillic-400-normal.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/cyrillic-600-normal.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/cyrillic-700-normal.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/manrope@latest/cyrillic-700-normal.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/fontsource/css/manrope@latest/cyrillic-800-normal.css" rel="stylesheet">
+    <!-- Шрифты: Google Fonts (стабильно работает в России) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Иконки: Font Awesome (множественные CDN с fallback) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+          onerror="this.onerror=null; this.href='https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css';">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
@@ -551,10 +553,10 @@
             </div>
             <div class="hero-photo" data-img="images/hero.jpg" data-img-id="img_1">
                 <img src="images/hero.jpg" alt="Клиника ДЕНТИКА" onerror="this.style.display='none'">
-                <div class="photo-fallback"><i class="fas fa-tooth"></i><span><span data-edit="auto_16">фото клиники</span></span></div>
+                <div class="photo-fallback"><i class="fas fa-tooth"></i><span><span data-edit="auto_24">фото клиники</span></span></div>
                 <div class="hero-float">
                     <i class="fas fa-user-doctor"></i>
-                    <div><b><span data-edit="auto_17">Первая консультация</span></b><span><span data-edit="auto_18">бесплатно + план лечения</span></span></div>
+                    <div><b><span data-edit="auto_25">Первая консультация</span></b><span><span data-edit="auto_26">бесплатно + план лечения</span></span></div>
                 </div>
             </div>
         </div>
@@ -563,10 +565,10 @@
     <!-- ПРЕИМУЩЕСТВА -->
     <div class="adv">
         <div class="adv-inner">
-            <a href="#contact" class="adv-item"><i class="fas fa-syringe"></i><div><b><span data-edit="auto_19">Безболезненно</span></b><span><span data-edit="auto_20">современная анестезия</span></span></div></a>
-            <a href="#contact" class="adv-item"><i class="fas fa-microscope"></i><div><b><span data-edit="auto_21">Точная диагностика</span></b><span><span data-edit="auto_22">3D-томограф</span></span></div></a>
-            <a href="#contact" class="adv-item"><i class="fas fa-shield-heart"></i><div><b><span data-edit="auto_23">Стерильно</span></b><span><span data-edit="auto_24">европротокол обработки</span></span></div></a>
-            <a href="#contact" class="adv-item"><i class="fas fa-file-invoice"></i><div><b><span data-edit="auto_25">Честные цены</span></b><span><span data-edit="auto_26">смета фиксируется до лечения</span></span></div></a>
+            <a href="#contact" class="adv-item"><i class="fas fa-syringe"></i><div><b><span data-edit="auto_27">Безболезненно</span></b><span><span data-edit="auto_28">современная анестезия</span></span></div></a>
+            <a href="#contact" class="adv-item"><i class="fas fa-microscope"></i><div><b><span data-edit="auto_29">Точная диагностика</span></b><span><span data-edit="auto_30">3D-томограф</span></span></div></a>
+            <a href="#contact" class="adv-item"><i class="fas fa-shield-heart"></i><div><b><span data-edit="auto_31">Стерильно</span></b><span><span data-edit="auto_32">европротокол обработки</span></span></div></a>
+            <a href="#contact" class="adv-item"><i class="fas fa-file-invoice"></i><div><b><span data-edit="auto_33">Честные цены</span></b><span><span data-edit="auto_34">смета фиксируется до лечения</span></span></div></a>
         </div>
     </div>
 
@@ -574,56 +576,56 @@
     <section class="sec" id="services">
         <div class="sec-inner">
             <div class="sec-head">
-                <h2><span data-edit="auto_27">Полный спектр стоматологии</span></h2>
-                <p><span data-edit="auto_28">От лечения кариеса до имплантации и голливудской улыбки — всё в одной клинике.</span></p>
+                <h2><span data-edit="auto_36">Полный спектр стоматологии</span></h2>
+                <p><span data-edit="auto_37">От лечения кариеса до имплантации и голливудской улыбки — всё в одной клинике.</span></p>
             </div>
             <div class="services-grid">
                 <div class="srv-card">
                     <div class="srv-icon"><i class="fas fa-tooth"></i></div>
                     <div>
-                        <h3><span data-edit="auto_29">Терапия и лечение кариеса</span></h3>
-                        <p><span data-edit="auto_30">Лечение каналов под микроскопом, эстетические реставрации.</span></p>
-                        <span class="srv-price"><span data-edit="auto_31">от 3 555 ₽</span></span>
+                        <h3><span data-edit="auto_38">Терапия и лечение кариеса</span></h3>
+                        <p><span data-edit="auto_39">Лечение каналов под микроскопом, эстетические реставрации.</span></p>
+                        <span class="srv-price"><span data-edit="auto_40">от 3 555 ₽</span></span>
                     </div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-icon"><i class="fas fa-teeth"></i></div>
                     <div>
-                        <h3><span data-edit="auto_32">Имплантация</span></h3>
-                        <p><span data-edit="auto_33">Имплантаты Osstem и Straumann, приживление 99,2%. Навигация 3D.</span></p>
-                        <span class="srv-price"><span data-edit="auto_34">от 25 000 ₽</span></span>
+                        <h3><span data-edit="auto_41">Имплантация</span></h3>
+                        <p><span data-edit="auto_42">Имплантаты Osstem и Straumann, приживление 99,2%. Навигация 3D.</span></p>
+                        <span class="srv-price"><span data-edit="auto_43">от 25 000 ₽</span></span>
                     </div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-icon"><i class="fas fa-sun"></i></div>
                     <div>
-                        <h3><span data-edit="auto_35">Отбеливание</span></h3>
-                        <p><span data-edit="auto_36">ZOOM 4 — до 8 тонов за один визит, безопасно для эмали.</span></p>
-                        <span class="srv-price"><span data-edit="auto_37">от 12 000 ₽</span></span>
+                        <h3><span data-edit="auto_44">Отбеливание</span></h3>
+                        <p><span data-edit="auto_45">ZOOM 4 — до 8 тонов за один визит, безопасно для эмали.</span></p>
+                        <span class="srv-price"><span data-edit="auto_46">от 12 000 ₽</span></span>
                     </div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-icon"><i class="fas fa-smile"></i></div>
                     <div>
-                        <h3><span data-edit="auto_38">Ортодонтия</span></h3>
-                        <p><span data-edit="auto_39">Брекеты и элайнеры для детей и взрослых. Ровные зубы без боли.</span></p>
-                        <span class="srv-price"><span data-edit="auto_40">от 45 000 ₽</span></span>
+                        <h3><span data-edit="auto_47">Ортодонтия</span></h3>
+                        <p><span data-edit="auto_48">Брекеты и элайнеры для детей и взрослых. Ровные зубы без боли.</span></p>
+                        <span class="srv-price"><span data-edit="auto_49">от 45 000 ₽</span></span>
                     </div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-icon"><i class="fas fa-shower"></i></div>
                     <div>
-                        <h3><span data-edit="auto_41">Гигиена и профилактика</span></h3>
-                        <p><span data-edit="auto_42">Ультразвук + Air Flow, полировка, фторирование, герметизация.</span></p>
-                        <span class="srv-price"><span data-edit="auto_43">от 4 500 ₽</span></span>
+                        <h3><span data-edit="auto_50">Гигиена и профилактика</span></h3>
+                        <p><span data-edit="auto_51">Ультразвук + Air Flow, полировка, фторирование, герметизация.</span></p>
+                        <span class="srv-price"><span data-edit="auto_52">от 4 500 ₽</span></span>
                     </div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-icon"><i class="fas fa-child"></i></div>
                     <div>
-                        <h3><span data-edit="auto_44">Детская стоматология</span></h3>
-                        <p><span data-edit="auto_45">Лечение без слёз и страха. Игровая форма, добрые врачи.</span></p>
-                        <span class="srv-price"><span data-edit="auto_46">от 2 000 ₽</span></span>
+                        <h3><span data-edit="auto_53">Детская стоматология</span></h3>
+                        <p><span data-edit="auto_54">Лечение без слёз и страха. Игровая форма, добрые врачи.</span></p>
+                        <span class="srv-price"><span data-edit="auto_55">от 2 000 ₽</span></span>
                     </div>
                 </div>
             </div>
@@ -634,22 +636,22 @@
     <section class="sec prices" id="prices">
         <div class="sec-inner">
             <div class="sec-head">
-                <h2><span data-edit="auto_47">Прозрачные цены</span></h2>
-                <p><span data-edit="auto_48">Итоговая смета фиксируется до начала лечения — никаких доплат «по ходу».</span></p>
+                <h2><span data-edit="auto_57">Прозрачные цены</span></h2>
+                <p><span data-edit="auto_58">Итоговая смета фиксируется до начала лечения — никаких доплат «по ходу».</span></p>
             </div>
             <div class="price-table">
-                <div class="price-row"><div class="name"><i class="fas fa-stethoscope"></i><span data-edit="auto_49">Консультация + план лечения</span></div><div class="cost"><span data-edit="auto_50">бесплатно</span></div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-tooth"></i><span data-edit="auto_51">Лечение кариеса</span></div><div class="cost"><span data-edit="auto_52">от 3 400 ₽</span></div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-shower"></i><span data-edit="auto_53">Профессиональная гигиена (УЗ + Air Flow)</span></div><div class="cost"><span data-edit="auto_54">от 4 500 ₽</span></div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-teeth"></i><span data-edit="auto_55">Имплантат Osstem с установкой</span></div><div class="cost"><span data-edit="auto_56">от 25 000 ₽</span></div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-crown"></i><span data-edit="auto_57">Коронка из диоксида циркония</span></div><div class="cost"><span data-edit="auto_58">от 18 000 ₽</span></div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-star"></i><span data-edit="auto_59">Виниры E-max</span></div><div class="cost"><span data-edit="auto_60">от 25 000 ₽</span></div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-sun"></i><span data-edit="auto_61">Отбеливание ZOOM 4</span></div><div class="cost"><span data-edit="auto_62">от 12 000 ₽</span></div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-smile"></i><span data-edit="auto_63">Брекеты под ключ (2 челюсти)</span></div><div class="cost"><span data-edit="auto_64">от 45 000 ₽</span></div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-child"></i><span data-edit="auto_65">Детский приём + фторирование</span></div><div class="cost"><span data-edit="auto_66">от 2 000 ₽</span></div></div>
-                <div class="price-row"><div class="name"><i class="fas fa-user-doctor"></i><span data-edit="auto_67">Удаление зуба любой сложности</span></div><div class="cost"><span data-edit="auto_68">от 3 000 ₽</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-stethoscope"></i><span data-edit="auto_59">Консультация + план лечения</span></div><div class="cost"><span data-edit="auto_60">бесплатно</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-tooth"></i><span data-edit="auto_61">Лечение кариеса</span></div><div class="cost"><span data-edit="auto_62">от 3 400 ₽</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-shower"></i><span data-edit="auto_63">Профессиональная гигиена (УЗ + Air Flow)</span></div><div class="cost"><span data-edit="auto_64">от 4 500 ₽</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-teeth"></i><span data-edit="auto_65">Имплантат Osstem с установкой</span></div><div class="cost"><span data-edit="auto_66">от 25 000 ₽</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-crown"></i><span data-edit="auto_67">Коронка из диоксида циркония</span></div><div class="cost"><span data-edit="auto_68">от 18 000 ₽</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-star"></i><span data-edit="auto_69">Виниры E-max</span></div><div class="cost"><span data-edit="auto_70">от 25 000 ₽</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-sun"></i><span data-edit="auto_71">Отбеливание ZOOM 4</span></div><div class="cost"><span data-edit="auto_72">от 12 000 ₽</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-smile"></i><span data-edit="auto_73">Брекеты под ключ (2 челюсти)</span></div><div class="cost"><span data-edit="auto_74">от 45 000 ₽</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-child"></i><span data-edit="auto_75">Детский приём + фторирование</span></div><div class="cost"><span data-edit="auto_76">от 2 000 ₽</span></div></div>
+                <div class="price-row"><div class="name"><i class="fas fa-user-doctor"></i><span data-edit="auto_77">Удаление зуба любой сложности</span></div><div class="cost"><span data-edit="auto_78">от 3 000 ₽</span></div></div>
             </div>
-            <p class="price-note"><span data-edit="auto_69">* Точную стоимость врач назовёт на бесплатной консультации после осмотра.</span></p>
+            <p class="price-note"><span data-edit="auto_79">* Точную стоимость врач назовёт на бесплатной консультации после осмотра.</span></p>
         </div>
     </section>
 
@@ -659,18 +661,18 @@
             <div class="about-grid">
                 <div class="about-photo" data-img="images/about.jpg" data-img-id="img_2">
                     <img src="images/about.jpg" alt="Интерьер клиники" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-hospital"></i><span><span data-edit="auto_70">фото интерьера</span></span></div>
+                    <div class="photo-fallback"><i class="fas fa-hospital"></i><span><span data-edit="auto_80">фото интерьера</span></span></div>
                 </div>
                 <div class="about-text">
-                    <span class="kicker"><span data-edit="auto_71">О клинике</span></span>
-                    <h2><span data-edit="auto_72">Стоматология, куда хочется возвращаться</span></h2>
-                    <p><span data-edit="auto_73">«ДЕНТИКА» — частная клиника в центре Москвы. 12 лет мы лечим зубы так, чтобы пациенты приходили снова и приводили семью: без боли, без навязывания лишнего и с фиксированной сметой.</span></p>
-                    <p><span data-edit="auto_74">Каждый кабинет оснащён 3D-томографом, микроскопом и системами цифровой диагностики. Все инструменты проходят тройную стерилизацию по европейскому протоколу.</span></p>
+                    <span class="kicker"><span data-edit="auto_81">О клинике</span></span>
+                    <h2><span data-edit="auto_82">Стоматология, куда хочется возвращаться</span></h2>
+                    <p><span data-edit="auto_83">«ДЕНТИКА» — частная клиника в центре Москвы. 12 лет мы лечим зубы так, чтобы пациенты приходили снова и приводили семью: без боли, без навязывания лишнего и с фиксированной сметой.</span></p>
+                    <p><span data-edit="auto_84">Каждый кабинет оснащён 3D-томографом, микроскопом и системами цифровой диагностики. Все инструменты проходят тройную стерилизацию по европейскому протоколу.</span></p>
                     <div class="about-feats">
-                        <a href="#contact" class="about-feat"><i class="fas fa-circle-check"></i><span data-edit="auto_75"> Гарантия до 5 лет по договору</span></a>
-                        <a href="#contact" class="about-feat"><i class="fas fa-circle-check"></i><span data-edit="auto_76"> Рассрочка 0% на 6 месяцев</span></a>
-                        <a href="#contact" class="about-feat"><i class="fas fa-circle-check"></i><span data-edit="auto_77"> Лечение в день обращения</span></a>
-                        <a href="#contact" class="about-feat"><i class="fas fa-circle-check"></i><span data-edit="auto_78"> Приём детей с 2 лет</span></a>
+                        <a href="#contact" class="about-feat"><i class="fas fa-circle-check"></i><span data-edit="auto_85"> Гарантия до 5 лет по договору</span></a>
+                        <a href="#contact" class="about-feat"><i class="fas fa-circle-check"></i><span data-edit="auto_86"> Рассрочка 0% на 6 месяцев</span></a>
+                        <a href="#contact" class="about-feat"><i class="fas fa-circle-check"></i><span data-edit="auto_87"> Лечение в день обращения</span></a>
+                        <a href="#contact" class="about-feat"><i class="fas fa-circle-check"></i><span data-edit="auto_88"> Приём детей с 2 лет</span></a>
                     </div>
                 </div>
             </div>
@@ -681,41 +683,41 @@
     <section class="sec doctors" id="doctors">
         <div class="sec-inner">
             <div class="sec-head">
-                <h2><span data-edit="auto_79">Наши врачи</span></h2>
-                <p><span data-edit="auto_80">Каждый специалист — с профильным образованием и опытом от 8 лет.</span></p>
+                <h2><span data-edit="auto_90">Наши врачи</span></h2>
+                <p><span data-edit="auto_91">Каждый специалист — с профильным образованием и опытом от 8 лет.</span></p>
             </div>
             <div class="doc-grid">
                 <div class="doc-card">
                     <div class="doc-photo" data-img="images/doctor1.jpg" data-img-id="img_3">
                         <img src="images/doctor1.jpg" alt="Анна Соколова" onerror="this.style.display='none'">
-                        <div class="photo-fallback"><i class="fas fa-user-doctor"></i><span><span data-edit="auto_81">фото врача</span></span></div>
+                        <div class="photo-fallback"><i class="fas fa-user-doctor"></i><span><span data-edit="auto_92">фото врача</span></span></div>
                     </div>
                     <div class="doc-info">
-                        <h3><span data-edit="auto_82">Анна Соколова</span></h3>
-                        <div class="doc-role"><span data-edit="auto_83">Главврач · Терапевт</span></div>
-                        <p><span data-edit="auto_84">12 лет опыта. Лечение каналов под микроскопом, эстетические реставрации.</span></p>
+                        <h3><span data-edit="auto_93">Анна Соколова</span></h3>
+                        <div class="doc-role"><span data-edit="auto_94">Главврач · Терапевт</span></div>
+                        <p><span data-edit="auto_95">12 лет опыта. Лечение каналов под микроскопом, эстетические реставрации.</span></p>
                     </div>
                 </div>
                 <div class="doc-card">
                     <div class="doc-photo" data-img="images/doctor2.jpg" data-img-id="img_4">
                         <img src="images/doctor2.jpg" alt="Игорь Волков" onerror="this.style.display='none'">
-                        <div class="photo-fallback"><i class="fas fa-user-doctor"></i><span><span data-edit="auto_85">фото врача</span></span></div>
+                        <div class="photo-fallback"><i class="fas fa-user-doctor"></i><span><span data-edit="auto_96">фото врача</span></span></div>
                     </div>
                     <div class="doc-info">
-                        <h3><span data-edit="auto_86">Игорь Волков</span></h3>
-                        <div class="doc-role"><span data-edit="auto_87">Имплантолог · Хирург</span></div>
-                        <p><span data-edit="auto_88">15 лет опыта. Более 3 000 установленных имплантатов, сложные случаи.</span></p>
+                        <h3><span data-edit="auto_97">Игорь Волков</span></h3>
+                        <div class="doc-role"><span data-edit="auto_98">Имплантолог · Хирург</span></div>
+                        <p><span data-edit="auto_99">15 лет опыта. Более 3 000 установленных имплантатов, сложные случаи.</span></p>
                     </div>
                 </div>
                 <div class="doc-card">
                     <div class="doc-photo" data-img="images/doctor3.jpg" data-img-id="img_5">
                         <img src="images/doctor3.jpg" alt="Мария Лебедева" onerror="this.style.display='none'">
-                        <div class="photo-fallback"><i class="fas fa-user-doctor"></i><span><span data-edit="auto_89">фото врача</span></span></div>
+                        <div class="photo-fallback"><i class="fas fa-user-doctor"></i><span><span data-edit="auto_100">фото врача</span></span></div>
                     </div>
                     <div class="doc-info">
-                        <h3><span data-edit="auto_90">Мария Лебедева</span></h3>
-                        <div class="doc-role"><span data-edit="auto_91">Ортодонт</span></div>
-                        <p><span data-edit="auto_92">8 лет опыта. Брекеты и элайнеры для детей и взрослых.</span></p>
+                        <h3><span data-edit="auto_101">Мария Лебедева</span></h3>
+                        <div class="doc-role"><span data-edit="auto_102">Ортодонт</span></div>
+                        <p><span data-edit="auto_103">8 лет опыта. Брекеты и элайнеры для детей и взрослых.</span></p>
                     </div>
                 </div>
             </div>
@@ -726,24 +728,24 @@
     <section class="sec" id="gallery">
         <div class="sec-inner">
             <div class="sec-head">
-                <h2><span data-edit="auto_93">Как мы выглядим</span></h2>
+                <h2><span data-edit="auto_105">Как мы выглядим</span></h2>
             </div>
             <div class="gal-grid">
                 <div class="gal-item" data-img="images/clinic1.jpg" data-img-id="img_6">
                     <img src="images/clinic1.jpg" alt="Кабинет" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-hospital-user"></i><span><span data-edit="auto_94">кабинет</span></span></div>
+                    <div class="photo-fallback"><i class="fas fa-hospital-user"></i><span><span data-edit="auto_106">кабинет</span></span></div>
                 </div>
                 <div class="gal-item" data-img="images/clinic2.jpg" data-img-id="img_7">
                     <img src="images/clinic2.jpg" alt="Оборудование" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-microscope"></i><span><span data-edit="auto_95">оборудование</span></span></div>
+                    <div class="photo-fallback"><i class="fas fa-microscope"></i><span><span data-edit="auto_107">оборудование</span></span></div>
                 </div>
                 <div class="gal-item" data-img="images/clinic3.jpg" data-img-id="img_8">
                     <img src="images/clinic3.jpg" alt="Зона ожидания" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-couch"></i><span><span data-edit="auto_96">зона ожидания</span></span></div>
+                    <div class="photo-fallback"><i class="fas fa-couch"></i><span><span data-edit="auto_108">зона ожидания</span></span></div>
                 </div>
                 <div class="gal-item" data-img="images/clinic4.jpg" data-img-id="img_9">
                     <img src="images/clinic4.jpg" alt="Стерилизация" onerror="this.style.display='none'">
-                    <div class="photo-fallback"><i class="fas fa-pump-medical"></i><span><span data-edit="auto_97">стерилизация</span></span></div>
+                    <div class="photo-fallback"><i class="fas fa-pump-medical"></i><span><span data-edit="auto_109">стерилизация</span></span></div>
                 </div>
             </div>
         </div>
@@ -753,31 +755,31 @@
     <section class="sec reviews" id="reviews">
         <div class="sec-inner">
             <div class="sec-head">
-                <h2><span data-edit="auto_98">Что говорят пациенты</span></h2>
+                <h2><span data-edit="auto_111">Что говорят пациенты</span></h2>
             </div>
             <div class="rev-grid">
                 <div class="rev-card">
                     <div class="rev-stars">★★★★★</div>
-                    <p><span data-edit="auto_99">«Боялась стоматологов 20 лет. Здесь вылечила три зуба и даже не заметила укола. Теперь только к Анне!»</span></p>
+                    <p><span data-edit="auto_112">«Боялась стоматологов 20 лет. Здесь вылечила три зуба и даже не заметила укола. Теперь только к Анне!»</span></p>
                     <div class="rev-author">
-                        <div class="rev-ava"><span data-edit="auto_100">ЕК</span></div>
-                        <div><b><span data-edit="auto_101">Елена К.</span></b><span><span data-edit="auto_102">пациент 2 года</span></span></div>
+                        <div class="rev-ava"><span data-edit="auto_113">ЕК</span></div>
+                        <div><b><span data-edit="auto_114">Елена К.</span></b><span><span data-edit="auto_115">пациент 2 года</span></span></div>
                     </div>
                 </div>
                 <div class="rev-card">
                     <div class="rev-stars">★★★★★</div>
-                    <p><span data-edit="auto_103">«Ставил два импланта у Игоря. Всё честно: назвали сумму — она не изменилась. Прижилось идеально, спасибо!»</span></p>
+                    <p><span data-edit="auto_116">«Ставил два импланта у Игоря. Всё честно: назвали сумму — она не изменилась. Прижилось идеально, спасибо!»</span></p>
                     <div class="rev-author">
-                        <div class="rev-ava"><span data-edit="auto_104">ДМ</span></div>
-                        <div><b><span data-edit="auto_105">Дмитрий М.</span></b><span><span data-edit="auto_106">имплантация, 2026</span></span></div>
+                        <div class="rev-ava"><span data-edit="auto_117">ДМ</span></div>
+                        <div><b><span data-edit="auto_118">Дмитрий М.</span></b><span><span data-edit="auto_119">имплантация, 2026</span></span></div>
                     </div>
                 </div>
                 <div class="rev-card">
                     <div class="rev-stars">★★★★★</div>
-                    <p><span data-edit="auto_107">«Дочке 5 лет, лечили первый зуб. Врач нашла подход за минуту — ребёнок вышел с шариком и без слёз.»</span></p>
+                    <p><span data-edit="auto_120">«Дочке 5 лет, лечили первый зуб. Врач нашла подход за минуту — ребёнок вышел с шариком и без слёз.»</span></p>
                     <div class="rev-author">
-                        <div class="rev-ava"><span data-edit="auto_108">ОС</span></div>
-                        <div><b><span data-edit="auto_109">Ольга С.</span></b><span><span data-edit="auto_110">детская стоматология</span></span></div>
+                        <div class="rev-ava"><span data-edit="auto_121">ОС</span></div>
+                        <div><b><span data-edit="auto_122">Ольга С.</span></b><span><span data-edit="auto_123">детская стоматология</span></span></div>
                     </div>
                 </div>
             </div>
@@ -788,26 +790,26 @@
     <section class="sec contact" id="contact">
         <div class="sec-inner">
             <div class="sec-head">
-                <h2><span data-edit="auto_111">Запишитесь на бесплатную консультацию</span></h2>
-                <p><span data-edit="auto_112">Перезвоним в течение 10 минут, подберём удобное время и врача.</span></p>
+                <h2><span data-edit="auto_125">Запишитесь на бесплатную консультацию</span></h2>
+                <p><span data-edit="auto_126">Перезвоним в течение 10 минут, подберём удобное время и врача.</span></p>
             </div>
             <div class="contact-grid">
                 <div>
                     <div class="c-item">
                         <i class="fas fa-phone"></i>
-                        <div><b><span data-edit="auto_113">Телефон</span></b><a href="tel:+79991234567"><span data-edit="auto_114">+7 (999) 123-45-67</span></a></div>
+                        <div><b><span data-edit="auto_127">Телефон</span></b><a href="tel:+79991234567"><span data-edit="auto_128">+7 (999) 123-45-67</span></a></div>
                     </div>
                     <div class="c-item">
                         <i class="fas fa-location-dot"></i>
-                        <div><b><span data-edit="auto_115">Адрес</span></b><a href="https://yandex.ru/maps/?text=Москва,+Ленинский+проспект,+45" target="_blank" rel="noopener noreferrer"><span data-edit="auto_116">г. Москва, Ленинский проспект, 45</span><br><span data-edit="auto_117">5 минут от м. Ленинский проспект</span></a></div>
+                        <div><b><span data-edit="auto_129">Адрес</span></b><a href="https://yandex.ru/maps/?text=Москва,+Ленинский+проспект,+45" target="_blank" rel="noopener noreferrer"><span data-edit="auto_130">г. Москва, Ленинский проспект, 45</span><br><span data-edit="auto_131">5 минут от м. Ленинский проспект</span></a></div>
                     </div>
                     <div class="c-item">
                         <i class="fas fa-clock"></i>
-                        <div><b><span data-edit="auto_118">Режим работы</span></b><span><span data-edit="auto_119">Ежедневно: 9:00 — 21:00, без выходных</span></span></div>
+                        <div><b><span data-edit="auto_132">Режим работы</span></b><span><span data-edit="auto_133">Ежедневно: 9:00 — 21:00, без выходных</span></span></div>
                     </div>
                     <div class="c-item">
                         <i class="fas fa-envelope"></i>
-                        <div><b><span data-edit="auto_120">Email</span></b><a href="mailto:info@dentika-clinic.ru"><span data-edit="auto_121">info@dentika-clinic.ru</span></a></div>
+                        <div><b><span data-edit="auto_134">Email</span></b><a href="mailto:info@dentika-clinic.ru"><span data-edit="auto_135">info@dentika-clinic.ru</span></a></div>
                     </div>
                     <div class="c-socials">
                         <a href="https://wa.me/79991234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
@@ -816,22 +818,22 @@
                     </div>
                 </div>
                 <div class="form-card">
-                    <h3><span data-edit="auto_122">Запись на приём</span></h3>
-                    <p><span data-edit="auto_123">Заполните форму — перезвоним в течение 10 минут</span></p>
+                    <h3><span data-edit="auto_136">Запись на приём</span></h3>
+                    <p><span data-edit="auto_137">Заполните форму — перезвоним в течение 10 минут</span></p>
                     <form action="https://formspree.io/f/xvkkbvpd" method="POST">
                         <input type="hidden" name="_subject" value="Запись на приём — клиника ДЕНТИКА">
                         <div class="f-row2">
                             <div class="f-group">
-                                <label><span data-edit="auto_124">Ваше имя</span></label>
-                                <input type="text" name="name" required="" placeholder="Мария">
+                                <label><span data-edit="auto_138">Ваше имя</span></label>
+                                <input type="text" name="name" required placeholder="Мария">
                             </div>
                             <div class="f-group">
-                                <label><span data-edit="auto_125">Телефон</span></label>
-                                <input type="tel" name="phone" required="" placeholder="+7 (___) ___-__-__" inputmode="tel">
+                                <label><span data-edit="auto_139">Телефон</span></label>
+                                <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" inputmode="tel">
                             </div>
                         </div>
                         <div class="f-group">
-                            <label><span data-edit="auto_126">Услуга</span></label>
+                            <label><span data-edit="auto_140">Услуга</span></label>
                             <select name="service">
                                 <option>Консультация (бесплатно)</option>
                                 <option>Лечение кариеса</option>
@@ -843,22 +845,22 @@
                             </select>
                         </div>
                         <div class="f-group">
-                            <label><span data-edit="auto_127">Комментарий</span></label>
+                            <label><span data-edit="auto_141">Комментарий</span></label>
                             <textarea name="message" placeholder="Удобное время, что беспокоит..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-calendar-check"></i><span data-edit="auto_128"> Записаться</span></button>
+                        <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-calendar-check"></i><span data-edit="auto_142"> Записаться</span></button>
                         <label class="privacy-check">
-                            <input type="checkbox" checked="">
-                            <span class="checkmark"></span><span data-edit="auto_129">
-                            Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
-                        </span></label>
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span data-edit="auto_143">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</span>
+                        </label>
                     </form>
                 </div>
                 <div class="contact-map">
                     <div class="map-wrap">
-                        <iframe src="https://yandex.ru/map-widget/v1/?ll=37.5852%2C55.7137&amp;z=16&amp;pt=37.5852%2C55.7137%2Cpm2rdm&amp;lang=ru_RU" title="Карта — клиника ДЕНТИКА на Ленинском проспекте, 45" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=37.5852%2C55.7137&z=16&pt=37.5852%2C55.7137%2Cpm2rdm&lang=ru_RU" title="Карта — клиника ДЕНТИКА на Ленинском проспекте, 45" allowfullscreen loading="lazy"></iframe>
                     </div>
-                    <a href="https://yandex.ru/maps/?text=Москва,+Ленинский+проспект,+45" target="_blank" rel="noopener noreferrer" class="map-link"><i class="fas fa-up-right-from-square"></i><span data-edit="auto_130"> Открыть в Яндекс.Картах</span></a>
+                    <a href="https://yandex.ru/maps/?text=Москва,+Ленинский+проспект,+45" target="_blank" rel="noopener noreferrer" class="map-link"><i class="fas fa-up-right-from-square"></i> Открыть в Яндекс.Картах</a>
                 </div>
             </div>
         </div>
@@ -877,13 +879,13 @@
 
     <!-- ПЛАВАЮЩАЯ ПАНЕЛЬ (мобильная) -->
     <div class="mobile-bar">
-        <a href="tel:+79991234567" class="bar-call"><i class="fas fa-phone"></i><span data-edit="auto_131"> Позвонить</span></a>
-        <a href="#contact" class="bar-form"><i class="fas fa-calendar-check"></i><span data-edit="auto_132"> Записаться</span></a>
+        <a href="tel:+79991234567" class="bar-call"><i class="fas fa-phone"></i> Позвонить</a>
+        <a href="#contact" class="bar-form"><i class="fas fa-calendar-check"></i> Записаться</a>
     </div>
 
     <footer>
-        <div class="logo"><span data-edit="auto_133">ДЕНТИКА</span><small><span data-edit="auto_134">частная стоматология</span></small></div>
-        <p><span data-edit="auto_135">© 2026 Клиника «ДЕНТИКА». Лицензия № ЛО-77-01-012345. Все права защищены.</span></p>
+        <div class="logo"><span data-edit="auto_144">ДЕНТИКА</span><small><span data-edit="auto_145">частная стоматология</span></small></div>
+        <p><span data-edit="auto_146">© 2026 Клиника «ДЕНТИКА». Лицензия № ЛО-77-01-012345. Все права защищены.</span></p>
     </footer>
 
     <script>
@@ -1008,9 +1010,9 @@
         <div class="cookie-content">
             <div class="cookie-icon">🍪</div>
             <div class="cookie-text">
-                <p><span data-edit="auto_136">Мы используем </span><strong><span data-edit="auto_137">cookie-файлы</span></strong><span data-edit="auto_138"> для улучшения работы сайта и анализа посещений. Продолжая пользоваться сайтом, вы соглашаетесь с </span><a href="politika.html" target="_blank" rel="noopener noreferrer"><span data-edit="auto_139">политикой обработки персональных данных</span></a>.</p>
+                <p>Мы используем <strong>cookie-файлы</strong> для улучшения работы сайта и анализа посещений. Продолжая пользоваться сайтом, вы соглашаетесь с <a href="politika.html" target="_blank" rel="noopener noreferrer">политикой обработки персональных данных</a>.</p>
             </div>
-            <button class="cookie-btn" id="cookieAccept"><span data-edit="auto_140">Принять</span></button>
+            <button class="cookie-btn" id="cookieAccept">Принять</button>
         </div>
     </div>
 
@@ -1028,6 +1030,5 @@
         })();
     </script>
 
-
-
-</body></html>
+</body>
+</html>
